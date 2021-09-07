@@ -1,21 +1,29 @@
-import { Box, makeStyles, Grid } from '@material-ui/core';
+import { Box, makeStyles, Grid, Divider } from '@material-ui/core';
 import React from 'react';
 import './App.css';
 import face from './face.png';
-import { AccountCircle, Folder, LinkedIn, GitHub ,Description, Brightness4, Home } from '@material-ui/icons';
+import { AccountCircle, LinkedIn, GitHub , Home } from '@material-ui/icons';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+import { useRoutes } from "hookrouter";
+import { Paths } from "./Paths"
 
 const useStyles = makeStyles(theme => ({
   siteBackground: {
-    display:'flex',
-    flexDirection:'column',
-    minHeight:'100vh',
-    minWidth:'100vw',
-   },
+    display: 'flex',
+    flexDirection: 'column',
+    minHeight: '100vh',
+    minWidth: '100vw',
+  },
   content: {
     background: theme.palette.primary.main
   },
   title: {
-     background: theme.palette.primary.light
+    background: theme.palette.primary.main
   },
   frame: {
     display: 'inline',
@@ -41,37 +49,43 @@ const useStyles = makeStyles(theme => ({
     margin: 'auto',
     textAlign: "center",
     bottom: 0,//USING grid for the formatting router  ALSO look into elevating this off page
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
   }
 }))
 
 export const App = () => {
+  const routeResult = useRoutes(Paths);
   const classes = useStyles();
   return (
     <Box className={classes.siteBackground}>
-      <Box 
+      <AppBar position="static">
+        <Toolbar>
+          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" className={classes.title}>
+            Travis Anderson
+          </Typography>
+          <Button color="inherit" onClick={() => { window.location.href = "/Home" }}><Home /></Button>
+          <Button color="inherit" onClick={() => { window.location.href = "/LinkedIn" }}><LinkedIn /></Button>
+          <Button color="inherit" onClick={() => { window.location.href = "/GitHub" }}><GitHub /></Button>
+          <Button color="inherit" onClick={() => { window.location.href = "/Resume" }}><AccountCircle /></Button>
+
+        </Toolbar>
+      </AppBar>
+      <Box className={classes.content}>
+        {routeResult}
+      </Box>
+
+      <Box
         className={`${classes.title} ${classes.frame}`}
         flexGrow={1}
-      >
-        <img src={face} className={classes.portrait} alt="face" />
-        <Grid 
-          className={classes.routerGrid}
-          container
-          direction="row"
-          justify="center"
-          spacing={3}
-        >
-          <Grid item xs={4} sm={4} md={4} lg={2} xl={2} spacing ={4}><AccountCircle /></Grid>
-          <Grid item xs={4} sm={4} md={4} lg={2} xl={2} spacing ={4}><Folder /></Grid>
-          <Grid item xs={4} sm={4} md={4} lg={2} xl={2} spacing ={4}><LinkedIn /></Grid>
-          <Grid item xs={4} sm={4} md={4} lg={2} xl={2} spacing ={4}><GitHub /></Grid>
-          <Grid item xs={4} sm={4} md={4} lg={2} xl={2} spacing ={4}><Description /></Grid>
-          <Grid item xs={4} sm={4} md={4} lg={2} xl={2} spacing ={4}><Brightness4 /></Grid>
-          <Grid item xs={4} sm={4} md={4} lg={2} xl={2} spacing ={4}><Home /></Grid>
-        </Grid>
-      </Box>
-      <Box className={classes.content}>
-        <p>test</p><p>test</p><p>test</p><p>test</p><p>test</p><p>test</p>
+      ><img src={face} className={classes.portrait} alt="face" />
+
       </Box>
     </Box>
   );
 }
+

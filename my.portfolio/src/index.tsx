@@ -9,7 +9,7 @@ import reportWebVitals from './reportWebVitals';
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: '#FF9E80'
+      main: '#F1F1F1'
     }
   }
 }
