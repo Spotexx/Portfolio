@@ -17,23 +17,23 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'column',
     minHeight: '100vh',
-    minWidth: '100vw',
   },
   content: {
-    background: theme.palette.primary.main
+    background: theme.palette.primary.dark
   },
   title: {
     background: theme.palette.primary.main
   },
   frame: {
     display: 'inline',
-    position: 'relative'
+    position: 'relative',
+    background: theme.palette.primary.dark
   },
   portrait: {
     maxHeight: '100%',
     maxWidth: '100%',
-    width: '20vh',
-    height: 'auto',
+    width: 'auto',
+    height: '30%',
     position: 'absolute',
     top: 0,
     bottom: '20%',

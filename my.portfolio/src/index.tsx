@@ -9,10 +9,10 @@ import reportWebVitals from './reportWebVitals';
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: '#F1F1F1'
-    }
+      main: '#7f7f7f'
+
   }
-}
+}}
 );
 
 ReactDOM.render(
