@@ -1,4 +1,5 @@
-import { Box, makeStyles, Container } from '@material-ui/core';
+//@ts-nocheck
+import { Box, makeStyles, Container, Paper } from '@material-ui/core';
 import React from 'react';
 import './App.css';
 import face from './face.png';
@@ -40,10 +41,10 @@ const useStyles = makeStyles(theme => ({
     right: 0,
     margin: 'auto'
   },
-  portraitBottomRight:{
-    position: 'sticky',
-    left: '80%',
-    top: '100%'
+  center:{
+    display: 'block',
+    marginLeft: 'auto',
+    marginRight: 'auto'
   },
   routerGrid: {
     position: 'absolute',
@@ -60,7 +61,7 @@ const useStyles = makeStyles(theme => ({
 }))
 
 export const App = () => {
-  var getHomeState = window.location.href.endsWith('/Home') ? true:  false;
+  var getHomeState = window.location.href.endsWith('/Home');
   //script src for linkedIn badge
 
   const routeResult = useRoutes(Paths);
@@ -73,7 +74,6 @@ export const App = () => {
           <Typography variant="h6" className={classes.title}>
             Travis Anderson_
           </Typography>
-          {/*TODO CENTER BUTTONS IN APPBAR PROPERLY*/}
           <Container maxWidth="sm">
             <Button color="inherit" onClick={() => { window.location.href = "/Home" }}><Home /></Button>
             <Button color="inherit" onClick={() => { window.location.href = "/LinkedIn" }}><LinkedIn /></Button>
@@ -84,16 +84,19 @@ export const App = () => {
         </Toolbar>
       </AppBar>
       <Box className={classes.content}>
-        {routeResult}
-      </Box>
+        <Container>
 
+          {routeResult}
+
+        </Container>
+      </Box>
       <Box
         className={`${classes.title} ${classes.frame}`}
         flexGrow={1}
       >
-      {/*<Container className={classes.siteBackground}> TODO TERNARY FUNCTION IsHref at '/home' CHANGE CLASSNAME TO MOVE TO BOTTOM RIGHT IF ITS NOT.*/}
       <Container className={classes.content}>
-        <img src={face} className={getHomeState ? classes.portrait : classes.portraitBottomRight} alt="face" />
+
+        <img src={face} className={getHomeState ? classes.portrait : classes.center} alt="face" />
 
       </Container>
       </Box>
