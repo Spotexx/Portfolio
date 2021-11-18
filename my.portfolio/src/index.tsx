@@ -1,28 +1,40 @@
 import React from 'react';
-import { ThemeProvider } from '@material-ui/styles';
-import { createMuiTheme } from '@material-ui/core/styles';
 import ReactDOM from 'react-dom';
 import './index.css';
 import { App } from './App';
 import reportWebVitals from './reportWebVitals';
+import { createTheme } from "@mui/material";
+import { StyledEngineProvider, ThemeProvider } from "@mui/material/styles";
+import { BrowserRouter } from "react-router-dom";
 
-const theme = createMuiTheme({
+
+const theme = createTheme({
   palette: {
     primary: {
-      main: '#242526'
-  },
+      main: '#b3e5fc'
+    },
     text: {
-        primary: '#E4E6EB',
-        secondary: '#B0B3B8'
+      primary: '#E4E6EB',
+      secondary: '#B0B3B8'
+    },
+    background: {
+      default: '#b3e5fc',
+      paper: '#e8eaf6'
     }
-}}
+  },
+  spacing: [0, 4, 8, 16, 24, 32, 40, 48, 56, 64]
+}
 );
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <App />
-    </ThemeProvider>
+    <BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <StyledEngineProvider injectFirst>
+          <App />
+        </StyledEngineProvider>
+      </ThemeProvider>
+    </BrowserRouter>
   </React.StrictMode >,
   document.getElementById('root')
 );
