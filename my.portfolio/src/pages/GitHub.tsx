@@ -3,7 +3,7 @@ import React from 'react';
 import {MyGallery} from "../Components/MyGallery";
 import {Box, Button, Paper, Typography} from "@mui/material";
 import {ElevatedPaper} from "../Components/ElevatedPaper";
-import {flexWrapper, paperStyle} from "../styles";
+import {flexWrapperOuterStyle, paperStyle} from "../styles";
 
 
 const paper = {
@@ -24,7 +24,7 @@ export const GitHub = () => {
 
     return (
         <Box>
-            <Box sx={flexWrapper}>
+            <Box sx={flexWrapperOuterStyle}>
                 <ElevatedPaper sx={{...paperStyle, width:'40%'}}>
                     <Typography variant="h3" sx={title}>GitHub
                         <Button sx={{...paper, ...buttonPadding, color: 'text.secondary'}}
