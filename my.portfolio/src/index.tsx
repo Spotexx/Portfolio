@@ -6,12 +6,16 @@ import reportWebVitals from './reportWebVitals';
 import { createTheme } from "@mui/material";
 import { StyledEngineProvider, ThemeProvider } from "@mui/material/styles";
 import { BrowserRouter } from "react-router-dom";
+import { UserContainer } from './Contexts/PageContext';
 
 
 const theme = createTheme({
   palette: {
     primary: {
       main: '#b3e5fc'
+    },
+    secondary: {
+      main: '#F85986'
     },
     text: {
       primary: '#000000',
@@ -22,8 +26,17 @@ const theme = createTheme({
       paper: '#e8eaf6'
     }
   },
-  spacing: [0, 4, 8, 16, 24, 32, 40, 48, 56, 64]
-}
+  spacing: [0, 4, 8, 16, 24, 32, 40, 48, 56, 64],
+  typography: {
+    h1: {
+      fontFamily: "Pacifico, Balsamiq Sans, cursive",
+    },
+     body1: {
+      fontFamily: "Balsamiq Sans, cursive",
+     },
+  },
+}, 
+
 );
 
 ReactDOM.render(
@@ -31,7 +44,9 @@ ReactDOM.render(
     <BrowserRouter>
       <ThemeProvider theme={theme}>
         <StyledEngineProvider injectFirst>
-          <App />
+          <UserContainer>
+           <App />
+          </UserContainer>
         </StyledEngineProvider>
       </ThemeProvider>
     </BrowserRouter>

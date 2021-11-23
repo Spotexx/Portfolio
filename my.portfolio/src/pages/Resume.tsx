@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {ElevatedPaper} from "../Components/ElevatedPaper";
-import {Box, Typography} from "@mui/material";
+import {Box, Button, Container, Typography} from "@mui/material";
+import { UserContainer, UserContext } from '../Contexts/PageContext';
 
 const title= {
     color: 'text.primary',
@@ -35,10 +36,11 @@ const subTitlePoints= {
 }
 
 const Resume = () => {
+    const {pageId, setPageId} = useContext(UserContext);
 
     return (
-        <Box sx={{marginTop: '40px', }}>
-            <Box sx={flexContainer}>
+        <Box sx={{position:'relative', marginTop: '40px', }}>
+            <Container sx={flexContainer}>
                 {/*left div*/}
                 <Box sx={flexItem}>
                     {/*//#region Main Title*/}
@@ -151,8 +153,14 @@ const Resume = () => {
                     </ElevatedPaper>
                     {/*//#endregion*/}
                 </Box>
-
-            </Box>
+                
+            </Container>
+            <Button onClick={() => setPageId(0)} variant={'contained'} sx={{position:'absolute', bottom:10, right:10, bgcolor:'secondary.light'}}>
+                <Typography sx={{display:'inlineBlock', verticalAlign:'middle'}}  variant={'body1'} >Home</Typography>
+            </Button>
+            <Button onClick={() => setPageId(2)} variant={'contained'} sx={{position:'absolute',bottom:10, left:10, bgcolor:'secondary.light', color:'#F22'}}>
+                <Typography sx={{display:'inlineBlock', verticalAlign:'middle'}}  variant={'body1'} >Git Hub</Typography>
+            </Button>
         </Box>
     );
 };

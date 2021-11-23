@@ -25,6 +25,10 @@ export const paperStyle = {
 /* #region  texts */
 export const titleStyle = {
     color: 'text.primary',
-    FontSize:10
+    fontSize:'80px'
+}
+export const textContentStyle ={
+    color: 'text.primary',
+    fontSize:'40px'
 }
 /* #endregion */
