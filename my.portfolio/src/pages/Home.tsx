@@ -5,7 +5,7 @@ import HomePic from '../picturesOther/HomePic.png';
 import face from '../face.png';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { UserContext } from "../Contexts/PageContext";
-
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 export const Home = () => {
     const animation = {
@@ -47,12 +47,13 @@ export const Home = () => {
                 image={HomePic}
                 alt="bgImage building blocks"
             />
-            <Button onClick={() => setPageId(1)} variant={'contained'} sx={{ position: 'absolute', top: '95vh', right: 10, bgcolor: 'secondary.light' }}>
+            <KeyboardArrowDownIcon fontSize='large' sx={{position:'absolute', bottom:'20px', left:'50.5%', right:'auto'}}/>
+            {/* <Button onClick={() => setPageId(1)} variant={'contained'} sx={{ position: 'absolute', top: '95vh', right: 10, bgcolor: 'secondary.light' }}>
                 <Typography sx={{ display: 'inlineBlock', verticalAlign: 'middle' }} variant={'body1'} >Linked In</Typography>
             </Button>
             <Button onClick={() => setPageId(3)} variant={'contained'} sx={{ position: 'absolute', top: '95vh', left: 10, bgcolor: 'secondary.light' }}>
                 <Typography sx={{ display: 'inlineBlock', verticalAlign: 'middle' }} variant={'body1'} >Resume</Typography>
-            </Button>
+            </Button> */}
         </Box>
     )
 }

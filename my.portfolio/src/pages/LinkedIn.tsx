@@ -13,16 +13,12 @@ const body = {
 export const LinkedIn = () => {
     const { pageId, setPageId } = useContext<any>(UserContext)
     return (
-        <Box sx={{ ...flexWrapperOuterStyle, ...backgroundStyle, flexDirection: 'column', ...foregroundStyle }}>
+        <Box sx={{ ...flexWrapperInnerStyle, ...backgroundStyle, padding:'30px', height:'auto', width:'auto', flexDirection: 'column', ...foregroundStyle }}>
 
-            <Box sx={{flexDirection: ['column', 'column', 'row', 'row', 'row'], ...flexWrapperInnerStyle, width: '100%', alignItems: 'center', ...titleContainer, ...foregroundStyle }}>
+            <Box sx={{flexDirection: 'column', ...flexWrapperInnerStyle, width: '100%', alignItems: 'center', ...titleContainer, ...foregroundStyle }}>
 
 
-                <CardMedia sx={{ height: '70px', width: '200px', top: 10, left: 10 }}
-                    component="img"
-                    image={face}
-                    alt="bgImage building blocks"
-                />
+              
                 <Typography variant="h1" sx={titleStyle}>Introduction</Typography>
                 <Button sx={buttonStyle}
                     onClick={() => window.open("https://www.linkedin.com/in/travis-anderson-60106a107/", "_blank")}> View
@@ -30,7 +26,7 @@ export const LinkedIn = () => {
                 </Button>
             </Box>
             <Box sx={flexWrapperInnerStyle}>
-                <Box sx={{ width: '30%' }} />
+               
                 <Container maxWidth='md' sx={{ ...flexWrapperInnerStyle, alignItems: 'center' }}>
                     <Typography variant={'body1'}>
                         They say that if you love what you do for your job then you never need to work a day in your life.
@@ -65,7 +61,7 @@ export const LinkedIn = () => {
             <Button onClick={() => setPageId(0)} variant={'contained'} sx={{ position: 'absolute', top: '95vh', left: 10, bgcolor: 'secondary.light' }}>
                 <Typography sx={{ display: 'inlineBlock', verticalAlign: 'middle' }} variant={'body1'} >Home</Typography>
             </Button>
-            <CardMedia sx={{ height: '100vh', width: '90vw', ...backdropImgStyle }}
+            {/* <CardMedia sx={{ height: '100vh', width: '90vw', ...backdropImgStyle }}
                 component="img"
                 height='100%'
                 width='100%'
@@ -76,6 +72,6 @@ export const LinkedIn = () => {
             style={{ height: '100vh', width: '90vw', ...backdropImgStyle }}
             src={LinkedInPic}
             alt='bg image blob'
-            />
+            /> */}
         </Box>)
 }
