@@ -1,7 +1,9 @@
 import React, { useContext } from 'react';
 import {ElevatedPaper} from "../Components/ElevatedPaper";
-import {Box, Button, Container, Typography} from "@mui/material";
+import {Box, Button, CardMedia, Container, Typography} from "@mui/material";
 import { UserContainer, UserContext } from '../Contexts/PageContext';
+import { backgroundStyle, buttonStyle, flexWrapperInnerStyle, flexWrapperOuterStyle, titleContainer, titleStyle } from '../styles';
+import face from '../face.png';
 
 const title= {
     color: 'text.primary',
@@ -19,7 +21,7 @@ const flexItem= {
     flex: '50%'
 }
 const paper= {
-    backgroundColor: 'primary.main',
+    bgcolor: 'background.paper',
     margin: '15px',
 }
 const content= {
@@ -39,7 +41,15 @@ const Resume = () => {
     const {pageId, setPageId} = useContext(UserContext);
 
     return (
-        <Box sx={{position:'relative', marginTop: '40px', }}>
+        <Box sx={{ ...flexWrapperOuterStyle, ...backgroundStyle, flexDirection: 'column', height:'100%', width:'100%'}}>
+            <Box sx={{ flexDirection: ['column', 'column', 'row', 'row', 'row'], ...flexWrapperInnerStyle, width: '100%', alignItems: 'center', ...titleContainer }}>
+                <CardMedia sx={{ height: '70px', width: '200px', top: 10, left: 10 }}
+                    component="img"
+                    image={face}
+                    alt="bgImage building blocks"
+                />
+                <Typography variant="h1" sx={titleStyle}>Resume</Typography>
+            </Box>
             <Container sx={flexContainer}>
                 {/*left div*/}
                 <Box sx={flexItem}>
@@ -155,14 +165,14 @@ const Resume = () => {
                 </Box>
                 
             </Container>
-            <Button onClick={() => setPageId(0)} variant={'contained'} sx={{position:'absolute', bottom:10, right:10, bgcolor:'secondary.light'}}>
+            <Button onClick={() => setPageId(0)} variant={'contained'} sx={{position: 'absolute', top: '95vh', right:10, bgcolor:'secondary.light'}}>
                 <Typography sx={{display:'inlineBlock', verticalAlign:'middle'}}  variant={'body1'} >Home</Typography>
             </Button>
-            <Button onClick={() => setPageId(2)} variant={'contained'} sx={{position:'absolute',bottom:10, left:10, bgcolor:'secondary.light', color:'#F22'}}>
+            <Button onClick={() => setPageId(2)} variant={'contained'} sx={{position:'absolute',top: '95vh', left:10, bgcolor:'secondary.light',}}>
                 <Typography sx={{display:'inlineBlock', verticalAlign:'middle'}}  variant={'body1'} >Git Hub</Typography>
             </Button>
         </Box>
     );
-};
+};//position: pageId === 3? 'fixed': 'absolute'
 
 export default Resume;

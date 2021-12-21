@@ -9,6 +9,7 @@ import Resume from './pages/Resume';
 import { Routes, Route } from 'react-router';
 import SwipeableViews from "react-swipeable-views";
 import { UserContext } from './Contexts/PageContext';
+import { backgroundStyle } from './styles';
 
 
 export const App = () => {
@@ -18,19 +19,29 @@ export const App = () => {
     const handleChangePageValue = (index: number) => {
         setPageId(index);
       };
+
+    const heightSelector = () => {
+        if(pageId === 3){
+            return undefined;
+        }else{
+            return '100vh';
+        }
+    }
     return (
 
-        <Box>
+        <Box style={{height:heightSelector(), overflow:'hidden'}}>
+            <Home/>
             <SwipeableViews
+                style={{backgroundColor:'primary.light'}}
                 axis={"x"}
                 index={pageId}
                 onChangeIndex={handleChangePageValue}
             >
-                <Home/>
+                
                 <LinkedIn/>
                 <GitHub/>
                 <Resume/>
-            </SwipeableViews>test
+            </SwipeableViews>
         </Box>
     );
 }

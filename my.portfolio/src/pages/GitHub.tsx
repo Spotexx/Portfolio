@@ -1,50 +1,90 @@
 
 import React, { useContext } from 'react';
-import {MyGallery} from "../Components/MyGallery";
-import {Box, Button, Paper, Typography} from "@mui/material";
-import {ElevatedPaper} from "../Components/ElevatedPaper";
-import {flexWrapperOuterStyle, paperStyle} from "../styles";
+import { Box, Button, CardMedia, ImageListItemBar, ImageListItem, Paper, Typography } from "@mui/material";
+import { ElevatedPaper } from "../Components/ElevatedPaper";
+import { backgroundStyle, buttonStyle, centerItem, flexWrapperInnerStyle, flexWrapperOuterStyle, paperStyle, titleContainer, titleStyle } from "../styles";
 import { UserContext } from '../Contexts/PageContext';
+import face from '../face.png';
+import MedPic1 from '../portfolioPictures/MedicationSite1.png';
 
 
-const paper = {
-    bgcolor: 'primary.main',
-    position: "relative"
-}as const;
-const title = {
-    color: 'primary.main',
-    padding: '20px',
-    paddingLeft: '10px'
 
-}
-const buttonPadding = {
-    marginLeft: '10px'
-}
 
 export const GitHub = () => {
-    const {pageId, setPageId} = useContext<any>(UserContext);
+    const { pageId, setPageId } = useContext<any>(UserContext);
 
     return (
-        <Box sx={{position:'relative'}}>
-            <Box >
-                <ElevatedPaper sx={{...paperStyle, width:'40%'}}>
-                    <Typography variant="h3" sx={title}>GitHub
-                        <Button sx={{...paper, ...buttonPadding, color: 'text.secondary'}}
-                                onClick={() => window.open('https://github.com/Spotexx', "_blank")}> View Travis's GitHub
-                            Profile
-                        </Button>
-                    </Typography>
-                </ElevatedPaper>
+        <Box sx={{ ...flexWrapperOuterStyle, ...backgroundStyle, flexDirection: 'column' }}>
+            <Box sx={{ flexDirection: ['column', 'column', 'row', 'row', 'row'], ...flexWrapperInnerStyle, width: '100%', alignItems: 'center', ...titleContainer }}>
+                <CardMedia sx={{ height: '70px', width: '200px', top: 10, left: 10 }}
+                    component="img"
+                    image={face}
+                    alt="bgImage building blocks"
+                />
+                <Typography variant="h1" sx={titleStyle}>GitHub</Typography>
+                <Button sx={{ ...buttonStyle }} onClick={() => window.open('https://github.com/Spotexx', "_blank")}>
+                    <Typography variant='body1'>View Travis's GitHub Profile </Typography>
+                </Button>
+            </Box>
+            <Box sx={{ ...flexWrapperInnerStyle, height: ['600px', , '700px'], flexDirection: ['column', , , 'row'] }}>
+                <Box sx={{ flex: [1, 2], height: '100%' }}>
+                    <Box sx={{ ...flexWrapperInnerStyle, flexDirection: 'column', ...centerItem }}>
+                        <ImageListItem sx={{ width: '90%' }}>
+                            <CardMedia
+                                //center
+                                sx={{ width: '100%' }}
+                                component="img"
+                                image={MedPic1}
+                            />
+                            <ImageListItemBar
+                                title={'Medication Tracker'}
+                                subtitle={'https://github.com/moonryc/moonmeds/'}
+                            />
+
+                        </ImageListItem>
+                    </Box>
+
+                </Box>
+                <Box sx={{ flex: [2, 1], ...flexWrapperInnerStyle, flexDirection: ['column', 'row', , 'column'], height: '700px' }}>
+                <Box sx={{ ...flexWrapperInnerStyle, flexDirection: 'column', ...centerItem }}>
+                    <ImageListItem sx={{ width: '90%',}}>
+                        <CardMedia
+                            //center
+                            sx={{ width: '100%' }}
+                            component="img"
+                            image={MedPic1}
+                        />
+                        <ImageListItemBar
+                            title={'Medication Tracker'}
+                            subtitle={'https://github.com/moonryc/moonmeds/'}
+                        />
+
+                    </ImageListItem>
+                    </Box>
+                    <Box sx={{ ...flexWrapperInnerStyle, flexDirection: 'column', ...centerItem }}>
+                    <ImageListItem sx={{ width: '90%', }}>
+                        <CardMedia
+                            //center
+                            sx={{ width: '100%' }}
+                            component="img"
+                            image={MedPic1}
+                        />
+                        <ImageListItemBar
+                            title={'Medication Tracker'}
+                            subtitle={'https://github.com/moonryc/moonmeds/'}
+                        />
+
+                    </ImageListItem>
+                    </Box>
+                </Box>
             </Box>
 
-            <Paper sx={paperStyle}>
-                <MyGallery/>
-            </Paper>
-            <Button onClick={() => setPageId(3)} variant={'contained'} sx={{position:'absolute',bottom:10, right:10, bgcolor:'secondary.light'}}>
-                <Typography sx={{display:'inlineBlock', verticalAlign:'middle'}}  variant={'body1'} >Resume</Typography>
+
+            <Button onClick={() => setPageId(3)} variant={'contained'} sx={{ ...buttonStyle, position: 'absolute', top: '95vh', right: 10, bgcolor: 'secondary.light' }}>
+                <Typography sx={{ display: 'inlineBlock', verticalAlign: 'middle' }} variant={'body1'} >Resume</Typography>
             </Button>
-            <Button onClick={() => setPageId(1)} variant={'contained'} sx={{position:'absolute',bottom:10, left:10, bgcolor:'secondary.light'}}>
-                <Typography sx={{display:'inlineBlock', verticalAlign:'middle'}}  variant={'body1'} >Linked In</Typography>
+            <Button onClick={() => setPageId(1)} variant={'contained'} sx={{ ...buttonStyle, position: 'absolute', top: '95vh', left: 10, bgcolor: 'secondary.light' }}>
+                <Typography sx={{ display: 'inlineBlock', verticalAlign: 'middle' }} variant={'body1'} >Linked In</Typography>
             </Button>
         </Box>
     );
