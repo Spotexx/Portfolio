@@ -48,7 +48,7 @@ export const App = () => {
     return (
         // https://www.npmjs.com/package/smooth-scroll
         <Box >
-            <Home />
+            
             <Box sx={{ ...centerItem, ...flexWrapperOuterStyle }}>
                 <Paper elevation={5} sx={{ ...flexWrapperInnerStyle, overflow: 'hidden', height: '90%', width: '90%', bgcolor: 'primary.dark' }}>
                     <Box sx={{ ...flexWrapperInnerStyle, flex: 38.2, flexDirection: 'column' }}>
