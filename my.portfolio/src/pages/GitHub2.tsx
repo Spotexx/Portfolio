@@ -4,13 +4,15 @@ import { Box, Button, CardMedia, ImageListItemBar, ImageListItem, Paper, Typogra
 import { ElevatedPaper } from "../Components/ElevatedPaper";
 import { backgroundStyle, buttonStyle, centerItem, flexWrapperInnerStyle, flexWrapperOuterStyle, paperStyle, titleContainer, titleStyle } from "../styles";
 import { UserContext } from '../Contexts/PageContext';
+//@ts-ignore
 import face from '../face.png';
+//@ts-ignore
 import MedPic1 from '../portfolioPictures/MedicationSite1.png';
 
 
 
 
-export const GitHub = () => {
+export const GitHub2 = () => {
     const { pageId, setPageId } = useContext<any>(UserContext);
 
     return (
@@ -21,7 +23,7 @@ export const GitHub = () => {
                     image={face}
                     alt="bgImage building blocks"
                 />
-                <Typography variant="h1" sx={titleStyle}>GitHub</Typography>
+                <Typography variant="h1" sx={titleStyle}>GitHub 2</Typography>
                 <Button sx={{ ...buttonStyle }} onClick={() => window.open('https://github.com/Spotexx', "_blank")}>
                     <Typography variant='body1'>View Travis's GitHub Profile </Typography>
                 </Button>
