@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import './App.css';
-import { Box, Container, Divider, List, ListItem, ListItemButton, ListItemText, Paper } from "@mui/material";
+import { Box, Button, Container, Divider, List, ListItem, ListItemButton, ListItemText, Paper } from "@mui/material";
 import { GitHub } from './pages/GitHub';
 import { GitHub2 } from './pages/GitHub2';
 import { LinkedIn } from './pages/LinkedIn';
@@ -11,31 +11,33 @@ import SwipeableViews from "react-swipeable-views";
 import { UserContext } from './Contexts/PageContext';
 import { backgroundStyle, centerItem, flexWrapperInnerStyle, flexWrapperOuterStyle } from './styles';
 import circleFace from './picturesOther/circleFace.png';
+import {animateScroll as scroll} from 'react-scroll';
 
 export const App = () => {
     var getHomeState = window.location.href.endsWith('/Home');
     const { pageId, setPageId } = useContext<any>(UserContext);
-    const page2 = useRef(null);
-    const [offset, setOffset] = useState(0.0);
 
     const handleChangePageValue = (index: number) => {
         setPageId(index);
     };
 
+    const scrollToMainContent = () => {
+        window.removeEventListener('scroll', scrollToMainContent);
+        scroll.scrollToBottom();
+        lockScrollToContent()
+    };  
+    const lockScrollToContent = () => {
+        //scroll pos of bottom of page
+        const bottomScrollPos = document.body.scrollHeight - window.innerHeight;
 
+            // if any scroll is attempted, set this to the previous value
+            window.onscroll = function() {
+                window.scrollTo(0, bottomScrollPos);
+            };
+    }
 
     useEffect(() => {
-        window.onscroll = () => {
-            //if scrollling down
-            if (window.pageYOffset > offset) {
-                    //set href to page2
-                    window.location.href = '#page2';
-
-
-                setOffset(window.pageYOffset);
-                
-            }
-        }
+        window.addEventListener("scroll", scrollToMainContent);
     }, [])
 
     const heightSelector = () => {
@@ -46,7 +48,6 @@ export const App = () => {
         }
     }
     return (
-        // https://www.npmjs.com/package/smooth-scroll
         <Box >
             <Home />
             <Box sx={{ ...centerItem, ...flexWrapperOuterStyle }}>
@@ -83,7 +84,6 @@ export const App = () => {
                     </Box>
                     <Divider orientation="vertical" variant='middle' flexItem />
                     <SwipeableViews
-                        id='page2'
                         style={{ backgroundColor: 'primary.light', flex: 61.8, overflow: 'hidden' }}
                         axis={"x"}
                         index={pageId}
