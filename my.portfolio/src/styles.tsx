@@ -43,7 +43,7 @@ export const textContentStyle ={
     fontSize:'40px'
 }
 export const titleContainer = {
-    height: ['25%','25%','15%'],
+    height: 'auto',
 }
 /* #endregion */
 /* #region  component styles */

@@ -51,7 +51,7 @@ export const App = () => {
         <Box >
             <Home />
             <Box sx={{ ...centerItem, ...flexWrapperOuterStyle }}>
-                <Paper elevation={5} sx={{ ...flexWrapperInnerStyle, overflow: 'hidden', height: '90%', width: '90%', bgcolor: 'primary.dark' }}>
+                <Box sx={{ ...flexWrapperInnerStyle, overflow: 'hidden', height: '90%', width: '90%', bgcolor: 'primary.dark' }}>
                     <Box sx={{ ...flexWrapperInnerStyle, flex: 38.2, flexDirection: 'column' }}>
                         <Box sx={{ flex: 61.8, ...flexWrapperInnerStyle, ...centerItem }}>
                             <img src={circleFace} alt='face' width='300' height='300' />
@@ -95,7 +95,7 @@ export const App = () => {
                         <GitHub2 />
                         <Resume />
                     </SwipeableViews>
-                </Paper>
+                </Box>
             </Box>
         </Box>
     );
