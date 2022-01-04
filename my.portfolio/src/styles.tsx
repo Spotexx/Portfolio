@@ -37,7 +37,6 @@ export const foregroundStyle = {
 export const titleStyle = {
     color: 'text.primary',
     fontSize:'80px',
-    marginRight:'40px',
 }
 export const textContentStyle ={
     color: 'text.primary',

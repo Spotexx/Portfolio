@@ -4,90 +4,80 @@ import { Box, Button, CardMedia, ImageListItemBar, ImageListItem, Paper, Typogra
 import { ElevatedPaper } from "../Components/ElevatedPaper";
 import { backgroundStyle, buttonStyle, centerItem, flexWrapperInnerStyle, flexWrapperOuterStyle, paperStyle, titleContainer, titleStyle } from "../styles";
 import { UserContext } from '../Contexts/PageContext';
-//@ts-ignore
 import face from '../face.png';
-//@ts-ignore
-import MedPic1 from '../portfolioPictures/MedicationSite1.png';
+import sitePic1 from '../portfolioPictures/LolSite1.gif';
 
 
-
+const picEffect = {
+    position: 'relative',
+    overflow: 'hidden',
+    width: '90%',
+    height: '90%',
+    '&:hover img': {
+        transition: 'all 0.5s ease-in-out',
+        filter: 'blur(2px)',
+    },
+    '&:hover div': {
+        transition: 'all 0.5s ease-in-out',
+        opacity: '0',
+    }
+}as const
+const imgTextEffect = {
+    top: '0',
+    color:'text.secondary',
+    bgcolor: 'background.pic',
+    width: '100%',
+    height: '100%',
+    padding: '10px',
+    position: 'absolute',
+    opacity: '0',
+    transition: 'all 0.5s ease-in-out',
+    '&:hover': {
+        backgroundOpacity: '0.5',
+        opacity: '100',
+    }
+} as const
 
 export const GitHub2 = () => {
     const { pageId, setPageId } = useContext<any>(UserContext);
 
     return (
-        <Box sx={{ ...flexWrapperInnerStyle, ...backgroundStyle, flexDirection: 'column' }}>
-            <Box sx={{ flexDirection: ['column', 'column', 'row', 'row', 'row'], ...flexWrapperInnerStyle, width: '100%', alignItems: 'center', ...titleContainer }}>
-                <CardMedia sx={{ height: '70px', width: '200px', top: 10, left: 10 }}
-                    component="img"
-                    image={face}
-                    alt="bgImage building blocks"
-                />
-                <Typography variant="h1" sx={titleStyle}>GitHub 2</Typography>
+        <Box sx={{ ...flexWrapperInnerStyle, ...backgroundStyle, flexDirection: 'column'}}>
+            <Box sx={{ flexDirection: 'column', ...flexWrapperInnerStyle, width: '100%', alignItems: 'center', ...titleContainer }}>
+
+                <Typography variant="body1" sx={{...titleStyle,  textAlign:'center'}}>Project 2</Typography>
                 <Button sx={{ ...buttonStyle }} onClick={() => window.open('https://github.com/Spotexx', "_blank")}>
-                    <Typography variant='body1'>View Travis's GitHub Profile </Typography>
+                    <Typography variant={'body1'}>View My GitHub Profile </Typography>
                 </Button>
             </Box>
             <Box sx={{ ...flexWrapperInnerStyle, height: ['600px', , '700px'], flexDirection: ['column', , , 'row'] }}>
                 <Box sx={{ flex: [1, 2], height: '100%' }}>
                     <Box sx={{ ...flexWrapperInnerStyle, flexDirection: 'column', ...centerItem }}>
-                        <ImageListItem sx={{ width: '90%' }}>
-                            <CardMedia
-                                //center
-                                sx={{ width: '100%' }}
-                                component="img"
-                                image={MedPic1}
+                        <ImageListItem sx={{...picEffect}}>
+                           
+                            <img
+                                style={{maxHeight: '100%', maxWidth: '100%'}}
+                                src={sitePic1}
                             />
-                            <ImageListItemBar
-                                title={'Medication Tracker'}
-                                subtitle={'https://github.com/moonryc/moonmeds/'}
-                            />
-
+                            <div>
+                                <ImageListItemBar
+                                    title={'Champion stats tracker'}
+                                    subtitle={'https://github.com/Spotexx/lolstats (code depricated)'}
+                                />
+                            </div> 
+                            <Typography sx={{...titleStyle, ...imgTextEffect}} onClick={()=>window.open('https://moonmeds.herokuapp.com/', "_blank")}>
+                                <Typography sx={{...titleStyle, color:'white'}}>Champion Stats Tracker</Typography>
+                                <Typography sx={{fontSize:'2.5rem'}}>
+                                Tags:
+                                <br/>
+                                React, Material-UI, Hook Router, Responsive design, papaparse
+                                </Typography>
+                            </Typography>
                         </ImageListItem>
                     </Box>
 
                 </Box>
-                <Box sx={{ flex: [2, 1], ...flexWrapperInnerStyle, flexDirection: ['column', 'row', , 'column'], height: '700px' }}>
-                <Box sx={{ ...flexWrapperInnerStyle, flexDirection: 'column', ...centerItem }}>
-                    <ImageListItem sx={{ width: '90%',}}>
-                        <CardMedia
-                            //center
-                            sx={{ width: '100%' }}
-                            component="img"
-                            image={MedPic1}
-                        />
-                        <ImageListItemBar
-                            title={'Medication Tracker'}
-                            subtitle={'https://github.com/moonryc/moonmeds/'}
-                        />
-
-                    </ImageListItem>
-                    </Box>
-                    <Box sx={{ ...flexWrapperInnerStyle, flexDirection: 'column', ...centerItem }}>
-                    <ImageListItem sx={{ width: '90%', }}>
-                        <CardMedia
-                            //center
-                            sx={{ width: '100%' }}
-                            component="img"
-                            image={MedPic1}
-                        />
-                        <ImageListItemBar
-                            title={'Medication Tracker'}
-                            subtitle={'https://github.com/moonryc/moonmeds/'}
-                        />
-
-                    </ImageListItem>
-                    </Box>
-                </Box>
             </Box>
-
-
-            <Button onClick={() => setPageId(3)} variant={'contained'} sx={{ ...buttonStyle, position: 'absolute', top: '95vh', right: 10, bgcolor: 'secondary.light' }}>
-                <Typography sx={{ display: 'inlineBlock', verticalAlign: 'middle' }} variant={'body1'} >Resume</Typography>
-            </Button>
-            <Button onClick={() => setPageId(1)} variant={'contained'} sx={{ ...buttonStyle, position: 'absolute', top: '95vh', left: 10, bgcolor: 'secondary.light' }}>
-                <Typography sx={{ display: 'inlineBlock', verticalAlign: 'middle' }} variant={'body1'} >Linked In</Typography>
-            </Button>
         </Box>
     );
 };

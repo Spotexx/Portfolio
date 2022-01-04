@@ -8,84 +8,76 @@ import face from '../face.png';
 import MedPic1 from '../portfolioPictures/MedicationSite1.png';
 
 
-
+const picEffect = {
+    position: 'relative',
+    overflow: 'hidden',
+    width: '90%',
+    height: '90%',
+    '&:hover img': {
+        transition: 'all 0.5s ease-in-out',
+        filter: 'blur(2px)',
+    },
+    '&:hover div': {
+        transition: 'all 0.5s ease-in-out',
+        opacity: '0',
+    }
+}as const
+const imgTextEffect = {
+    top: '0',
+    color:'text.secondary',
+    bgcolor: 'background.pic',
+    width: '100%',
+    height: '100%',
+    padding: '10px',
+    position: 'absolute',
+    opacity: '0',
+    transition: 'all 0.5s ease-in-out',
+    '&:hover': {
+        backgroundOpacity: '0.5',
+        opacity: '100',
+    }
+} as const
 
 export const GitHub = () => {
     const { pageId, setPageId } = useContext<any>(UserContext);
 
     return (
-        <Box sx={{ ...flexWrapperInnerStyle, ...backgroundStyle, flexDirection: 'column' }}>
-            <Box sx={{ flexDirection: ['column', 'column', 'row', 'row', 'row'], ...flexWrapperInnerStyle, width: '100%', alignItems: 'center', ...titleContainer }}>
-                <CardMedia sx={{ height: '70px', width: '200px', top: 10, left: 10 }}
-                    component="img"
-                    image={face}
-                    alt="bgImage building blocks"
-                />
-                <Typography variant="h1" sx={titleStyle}>GitHub</Typography>
+        <Box sx={{ ...flexWrapperInnerStyle, ...backgroundStyle, flexDirection: 'column'}}>
+            <Box sx={{ flexDirection: 'column', ...flexWrapperInnerStyle, width: '100%', alignItems: 'center', ...titleContainer }}>
+
+                <Typography variant="body1" sx={{...titleStyle,  textAlign:'center'}}>Project 1</Typography>
                 <Button sx={{ ...buttonStyle }} onClick={() => window.open('https://github.com/Spotexx', "_blank")}>
-                    <Typography variant='body1'>View Travis's GitHub Profile </Typography>
+                    <Typography variant={'body1'}>View My GitHub Profile </Typography>
                 </Button>
             </Box>
             <Box sx={{ ...flexWrapperInnerStyle, height: ['600px', , '700px'], flexDirection: ['column', , , 'row'] }}>
                 <Box sx={{ flex: [1, 2], height: '100%' }}>
                     <Box sx={{ ...flexWrapperInnerStyle, flexDirection: 'column', ...centerItem }}>
-                        <ImageListItem sx={{ width: '90%' }}>
-                            <CardMedia
-                                //center
-                                sx={{ width: '100%' }}
-                                component="img"
-                                image={MedPic1}
+                        <ImageListItem sx={{...picEffect}}>
+                           
+                            <img
+                                style={{maxHeight: '100%', maxWidth: '100%'}}
+                                src={MedPic1}
                             />
-                            <ImageListItemBar
-                                title={'Medication Tracker'}
-                                subtitle={'https://github.com/moonryc/moonmeds/'}
-                            />
-
+                            <div>
+                                <ImageListItemBar
+                                    title={'Medication Tracker'}
+                                    subtitle={'https://github.com/moonryc/moonmeds/'}
+                                />
+                            </div> 
+                            <Typography sx={{...titleStyle, ...imgTextEffect}} onClick={()=>window.open('https://moonmeds.herokuapp.com/', "_blank")}>
+                                <Typography sx={{...titleStyle, color:'white'}}>Medication Tracker</Typography>
+                                <Typography sx={{fontSize:'2.5rem'}}>
+                                Tags:
+                                <br/>
+                                React, Material-UI, Redux, Typescript, Date-FNS, React Router, Responsive Design
+                                </Typography>
+                            </Typography>
                         </ImageListItem>
                     </Box>
 
                 </Box>
-                <Box sx={{ flex: [2, 1], ...flexWrapperInnerStyle, flexDirection: ['column', 'row', , 'column'], height: '700px' }}>
-                <Box sx={{ ...flexWrapperInnerStyle, flexDirection: 'column', ...centerItem }}>
-                    <ImageListItem sx={{ width: '90%',}}>
-                        <CardMedia
-                            //center
-                            sx={{ width: '100%' }}
-                            component="img"
-                            image={MedPic1}
-                        />
-                        <ImageListItemBar
-                            title={'Medication Tracker'}
-                            subtitle={'https://github.com/moonryc/moonmeds/'}
-                        />
-
-                    </ImageListItem>
-                    </Box>
-                    <Box sx={{ ...flexWrapperInnerStyle, flexDirection: 'column', ...centerItem }}>
-                    <ImageListItem sx={{ width: '90%', }}>
-                        <CardMedia
-                            //center
-                            sx={{ width: '100%' }}
-                            component="img"
-                            image={MedPic1}
-                        />
-                        <ImageListItemBar
-                            title={'Medication Tracker'}
-                            subtitle={'https://github.com/moonryc/moonmeds/'}
-                        />
-
-                    </ImageListItem>
-                    </Box>
-                </Box>
             </Box>
-
-
-            <Button onClick={() => setPageId(3)} variant={'contained'} sx={{ ...buttonStyle, position: 'absolute', top: '95vh', right: 10, bgcolor: 'secondary.light' }}>
-                <Typography sx={{ display: 'inlineBlock', verticalAlign: 'middle' }} variant={'body1'} >Resume</Typography>
-            </Button>
-            <Button onClick={() => setPageId(1)} variant={'contained'} sx={{ ...buttonStyle, position: 'absolute', top: '95vh', left: 10, bgcolor: 'secondary.light' }}>
-                <Typography sx={{ display: 'inlineBlock', verticalAlign: 'middle' }} variant={'body1'} >Linked In</Typography>
-            </Button>
         </Box>
     );
 };

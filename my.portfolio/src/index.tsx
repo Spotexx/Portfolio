@@ -9,6 +9,7 @@ import { BrowserRouter } from "react-router-dom";
 import { UserContainer } from './Contexts/PageContext';
 
 
+
 const theme = createTheme({
   palette: {
     primary: {
@@ -23,7 +24,9 @@ const theme = createTheme({
     },
     background: {
       default: '#b3e5fc',
-      paper: '#e8eaf6'
+      //@ts-ignore
+      pic: 'rgba(0,0,0,0.5)',
+      paper: '#e8eaf6',
     }
   },
   spacing: [0, 4, 8, 16, 24, 32, 40, 48, 56, 64],
@@ -31,13 +34,14 @@ const theme = createTheme({
     h1: {
       fontFamily: "Pacifico, Balsamiq Sans, cursive",
     },
-     body1: {
+    body1: {
       fontFamily: "Balsamiq Sans, cursive",
-     },
+    },
   },
-}, 
+},
 
 );
+
 
 ReactDOM.render(
   <React.StrictMode>
@@ -45,7 +49,7 @@ ReactDOM.render(
       <ThemeProvider theme={theme}>
         <StyledEngineProvider injectFirst>
           <UserContainer>
-           <App />
+            <App />
           </UserContainer>
         </StyledEngineProvider>
       </ThemeProvider>

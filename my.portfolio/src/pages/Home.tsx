@@ -48,12 +48,7 @@ export const Home = () => {
                 alt="bgImage building blocks"
             />
             <KeyboardArrowDownIcon fontSize='large' sx={{position:'absolute', bottom:'20px', left:'50.5%', right:'auto'}}/>
-            {/* <Button onClick={() => setPageId(1)} variant={'contained'} sx={{ position: 'absolute', top: '95vh', right: 10, bgcolor: 'secondary.light' }}>
-                <Typography sx={{ display: 'inlineBlock', verticalAlign: 'middle' }} variant={'body1'} >Linked In</Typography>
-            </Button>
-            <Button onClick={() => setPageId(3)} variant={'contained'} sx={{ position: 'absolute', top: '95vh', left: 10, bgcolor: 'secondary.light' }}>
-                <Typography sx={{ display: 'inlineBlock', verticalAlign: 'middle' }} variant={'body1'} >Resume</Typography>
-            </Button> */}
+
         </Box>
     )
 }
