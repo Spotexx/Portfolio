@@ -1,20 +1,18 @@
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import { Box, Divider, List, ListItem, ListItemButton, ListItemText } from "@mui/material";
+import React, { useContext } from 'react';
+import SwipeableViews from "react-swipeable-views";
 import './App.css';
-import { Box, Button, Container, Divider, List, ListItem, ListItemButton, ListItemText, Paper } from "@mui/material";
+import { UserContext } from './Contexts/PageContext';
 import { GitHub } from './pages/GitHub';
 import { GitHub2 } from './pages/GitHub2';
-import { LinkedIn } from './pages/LinkedIn';
 import { Home } from './pages/Home';
+import { LinkedIn } from './pages/LinkedIn';
 import Resume from './pages/Resume';
-import { Routes, Route } from 'react-router';
-import SwipeableViews from "react-swipeable-views";
-import { UserContext } from './Contexts/PageContext';
-import { backgroundStyle, centerItem, flexWrapperInnerStyle, flexWrapperOuterStyle } from './styles';
 import circleFace from './picturesOther/circleFace.png';
-import  Pagify from './react-mui-pagify/Pagify/index';
+import Pagify from './react-mui-pagify/Pagify/index';
+import { centerItem, flexWrapperInnerStyle, flexWrapperOuterStyle } from './styles';
 
 export const App = () => {
-    var getHomeState = window.location.href.endsWith('/Home');
     const { pageId, setPageId } = useContext<any>(UserContext);
 
     const handleChangePageValue = (index: number) => {
@@ -25,13 +23,7 @@ export const App = () => {
 
 
 
-    const heightSelector = () => {
-        if (pageId === 3) {
-            return undefined;
-        } else {
-            return '100vh';
-        }
-    }
+
     return (
         <Box >
             <Pagify>
@@ -70,7 +62,7 @@ export const App = () => {
                         </Box>
                         <Divider orientation="vertical" variant='middle' flexItem />
                         <SwipeableViews
-                            style={{ backgroundColor: 'primary.light', flex: 61.8, overflow: 'hidden' }}
+                            style={{ backgroundColor: 'primary.light', flex: 61.8, overflow: 'auto', height: '100%' }}
                             axis={"x"}
                             index={pageId}
                             onChangeIndex={handleChangePageValue}

@@ -1,11 +1,10 @@
-import { Box, Button, CardMedia, Container, Typography } from "@mui/material";
-import React, { useContext } from "react";
-import { backgroundStyle, flexWrapperInnerStyle, flexWrapperOuterStyle, textContentStyle, titleStyle } from "../styles";
-import HomePic from '../picturesOther/HomePic.png';
-import face from '../face.png';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import { UserContext } from "../Contexts/PageContext";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import { Box, CardMedia, Container, Typography } from "@mui/material";
+import React, { useContext } from "react";
+import { UserContext } from "../Contexts/PageContext";
+import face from '../face.png';
+import HomePic from '../picturesOther/HomePic.png';
+import { backgroundStyle, flexWrapperInnerStyle, flexWrapperOuterStyle, textContentStyle, titleStyle } from "../styles";
 
 export const Home = () => {
     const animation = {
@@ -47,7 +46,7 @@ export const Home = () => {
                 image={HomePic}
                 alt="bgImage building blocks"
             />
-            <KeyboardArrowDownIcon fontSize='large' sx={{position:'absolute', bottom:'20px', left:'50.5%', right:'auto'}}/>
+            <KeyboardArrowDownIcon fontSize='large' sx={{ position: 'absolute', bottom: '20px', left: '50.5%', right: 'auto' }} />
 
         </Box>
     )
