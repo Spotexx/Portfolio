@@ -1,9 +1,9 @@
+import { Box, Button, CardMedia, Container, Typography } from "@mui/material";
 import React, { useContext } from 'react';
-import {ElevatedPaper} from "../Components/ElevatedPaper";
-import {Box, Button, CardMedia, Container, Typography} from "@mui/material";
-import { UserContainer, UserContext } from '../Contexts/PageContext';
-import { backgroundStyle, buttonStyle, flexWrapperInnerStyle, flexWrapperOuterStyle, titleContainer, titleStyle } from '../styles';
+import { ElevatedPaper } from "../Components/ElevatedPaper";
+import { UserContext } from '../Contexts/PageContext';
 import face from '../face.png';
+import { backgroundStyle, flexWrapperInnerStyle, flexWrapperOuterStyle, titleContainer, titleStyle } from '../styles';
 
 const title= {
     color: 'text.primary',

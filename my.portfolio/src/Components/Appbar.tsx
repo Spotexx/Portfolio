@@ -1,10 +1,10 @@
-import React from "react";
-import {titleStyle} from "../styles";
-import {AppBar, Box, Button, Container, Toolbar, Typography} from "@mui/material";
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import HomeIcon from '@mui/icons-material/Home';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import GitHubIcon from '@mui/icons-material/GitHub';
+import { AppBar, Box, Button, Container, Toolbar, Typography } from "@mui/material";
+import React from "react";
+import { titleStyle } from "../styles";
 
 export const Appbar = () => {
     return (
