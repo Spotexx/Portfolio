@@ -1,11 +1,9 @@
 
+import { Box, Button, ImageListItem, ImageListItemBar, Typography } from "@mui/material";
 import React, { useContext } from 'react';
-import { Box, Button, CardMedia, ImageListItemBar, ImageListItem, Paper, Typography } from "@mui/material";
-import { ElevatedPaper } from "../Components/ElevatedPaper";
-import { backgroundStyle, buttonStyle, centerItem, flexWrapperInnerStyle, flexWrapperOuterStyle, paperStyle, titleContainer, titleStyle } from "../styles";
 import { UserContext } from '../Contexts/PageContext';
-import face from '../face.png';
 import MedPic1 from '../portfolioPictures/MedicationSite1.png';
+import { backgroundStyle, buttonStyle, centerItem, flexWrapperInnerStyle, titleContainer, titleStyle } from "../styles";
 
 
 const picEffect = {
