@@ -1,10 +1,6 @@
 import React, { Component, Fragment } from 'react';
-
-import './Pagify.css';
 import Page from '../Page';
-import BottomNavigation from '@mui/material/BottomNavigation';
-import BottomNavigationAction from '@mui/material/BottomNavigationAction';
-import ResponsiveNav from '../ResponsiveNav';
+import './Pagify.css';
 
 export default class Pagify extends Component {
 	constructor(props) {
@@ -14,8 +10,7 @@ export default class Pagify extends Component {
 		this.state = {
 			currentPage: 0,
 			animLocked: false,
-			width: window.innerWidth, 
-			height: window.innerHeight
+			width: window.innerWidth
 		};
 		this.lastTouch = null;
 		this.animLocked = false;
@@ -155,7 +150,7 @@ export default class Pagify extends Component {
 							//Give every child their height, width, the current page, and a method to set the current page
 							let childWithSetPage = React.cloneElement(child, { setPage: this.setPage, currentPage: this.state.currentPage, width: this.state.width, height: this.state.height });
 
-							return <Page style={{width: this.state.width, height: this.state.height}} pageRef={this.state.pageRefs[keyIndex]} key={keyIndex} {...child.props}>
+							return <Page style={{width: this.state.width}} pageRef={this.state.pageRefs[keyIndex]} key={keyIndex} {...child.props}>
 								{childWithSetPage}
 								{/*Spacer because navbar can be up to 112px tall*/}
 								

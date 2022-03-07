@@ -19,17 +19,12 @@ export const App = () => {
         setPageId(index);
     };
 
-
-
-
-
-
     return (
         <Box >
             <Pagify>
                 <Home />
                 <Box sx={{ ...centerItem, ...flexWrapperOuterStyle }}>
-                    <Box sx={{ ...flexWrapperInnerStyle, overflow: 'hidden', height: '90%', width: '90%', bgcolor: 'primary.dark' }}>
+                    <Box sx={{ ...flexWrapperInnerStyle, overflow: 'hidden', width: '90%', bgcolor: 'primary.dark' }}>
                         <Box sx={{ ...flexWrapperInnerStyle, flex: 38.2, flexDirection: 'column' }}>
                             <Box sx={{ flex: 61.8, ...flexWrapperInnerStyle, ...centerItem }}>
                                 <img src={circleFace} alt='face' width='300' height='300' />

@@ -1,18 +1,17 @@
-import { SxProps, Theme } from "@mui/system"
 /* #region  Wrappers and backgrounds */
 export const flexWrapperOuterStyle = {
-    position:'relative',
+    position: 'relative',
     display: 'flex',
     flexDirection: 'row',
     height: '100vh',
     width: '100vw'
-}as const
+} as const
 export const flexWrapperInnerStyle = {
-    position:'relative',
+    position: 'relative',
     display: 'flex',
     height: '100%',
     width: '100%'
-}as const
+} as const
 export const centerItem = {
     alignItems: 'center',
     justifyContent: 'center',
@@ -22,25 +21,25 @@ export const centerItem = {
 export const backgroundStyle = {
     bgcolor: 'primary.main'
 }
-export const backdropImgStyle ={
-    position:'absolute',
-    top:0,
-    left:0,
-    zIndex:-100
-}as const
+export const backdropImgStyle = {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    zIndex: -100
+} as const
 export const foregroundStyle = {
-    position:'relative',
-    zIndex:100
-}as const
+    position: 'relative',
+    zIndex: 100
+} as const
 /* #endregion */
 /* #region  texts */
 export const titleStyle = {
     color: 'text.primary',
-    fontSize:'80px',
+    fontSize: '80px',
 }
-export const textContentStyle ={
+export const textContentStyle = {
     color: 'text.primary',
-    fontSize:'40px'
+    fontSize: '40px'
 }
 export const titleContainer = {
     height: 'auto',
@@ -53,6 +52,6 @@ export const paperStyle = {
 }
 export const buttonStyle = {
     bgcolor: 'secondary.light',
-    color:'text.primary',
+    color: 'text.primary',
 }
 /* #endregion */

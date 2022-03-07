@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-
+import React, { Component } from 'react';
 import './Page.css';
+
 
 export default class Page extends Component {
 	render() {
