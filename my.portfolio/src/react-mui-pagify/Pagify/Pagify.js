@@ -10,7 +10,8 @@ export default class Pagify extends Component {
 		this.state = {
 			currentPage: 0,
 			animLocked: false,
-			width: window.innerWidth
+			width: window.innerWidth,
+			height: window.innerHeight,
 		};
 		this.lastTouch = null;
 		this.animLocked = false;
