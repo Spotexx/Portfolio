@@ -57,9 +57,9 @@ export const MedicationTracker = () => {
                                 />
                             </div>
                             <Typography sx={{ ...titleStyle, ...imgTextEffect }} onClick={() => window.open('https://moonmeds.herokuapp.com/', "_blank")}>
-                                <Typography sx={{ ...titleStyle, color: 'white' }}>Medication Tracker</Typography>
-                                <Typography sx={{ fontSize: '2.5rem' }}>
-                                    Tags:
+                                <Typography sx={{ ...titleStyle, color: 'white', fontSize: ['1rem', '1rem', '1.5rem', '2.5rem'] }}>Medication Tracker</Typography>
+                                <Typography sx={{ fontSize: ['1rem', '1rem', '1.5rem', '2.5rem'] }}>
+                                    Technologies used:
                                     <br />
                                     React, Material-UI, Redux, Typescript, Date-FNS, React Router, Responsive Design
                                 </Typography>

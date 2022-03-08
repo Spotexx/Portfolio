@@ -40,10 +40,10 @@ export const Home = () => {
             <Box sx={{ flexDirection: 'row', ...flexWrapperInnerStyle, flex: '50%', alignItems: 'center' }}>
                 <Container maxWidth='sm' sx={{ justifyContent: 'center' }}>
                     <Box sx={animation}>
-                        <Typography variant={'h1'} sx={{ ...titleStyle, marginLeft: '5px', fontSize: '3rem' }}>
+                        <Typography variant={'h1'} sx={{ ...titleStyle, marginLeft: '5px', fontSize: '2rem' }}>
                             Hello!
                         </Typography>
-                        <Typography variant={"body1"} sx={{ ...textContentStyle, fontSize: '2rem', marginRight: [0, 0, 0, '-100px'] }}>
+                        <Typography variant={"body1"} sx={{ ...textContentStyle, fontSize: '1.7rem', marginRight: [0, 0, 0, '-100px'] }}>
                             I'm Travis Anderson, a web developer with experience using
                             HTML, Javascript, CSS, React, Material UI, MongoDB, Express, Node and MySQL.
                         </Typography>
