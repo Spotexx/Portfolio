@@ -3,9 +3,9 @@ import React from 'react';
 import './App.css';
 import { Home } from './pages/Home';
 import { LinkedIn } from './pages/LinkedIn';
+import LinkTree from './pages/LinkTree';
 import { LolStats } from './pages/LolStats';
 import { MedicationTracker } from "./pages/MedicationTracker";
-import Resume from './pages/Resume';
 import Pagify from './react-mui-pagify/Pagify/index';
 
 export const App = () => {
@@ -16,7 +16,7 @@ export const App = () => {
                 <LinkedIn />
                 <MedicationTracker />
                 <LolStats />
-                <Resume />
+                <LinkTree />
             </Pagify >
         </Box >
     );
