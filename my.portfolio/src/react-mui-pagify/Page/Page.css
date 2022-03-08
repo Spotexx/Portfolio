@@ -1,6 +1,5 @@
-.page{
+.page {
     background-color: #f5fafa;
-    overflow: auto;
     display: flex;
     flex-direction: column;
     scroll-behavior: smooth;
@@ -17,9 +16,10 @@
     border-radius: 9999px;
 }
 
-.spacer-top{
+.spacer-top {
     flex: 2;
 }
-.spacer-bottom{
+
+.spacer-bottom {
     flex: 2;
 }
