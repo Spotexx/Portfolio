@@ -1,7 +1,8 @@
 
-import { Box, Button, ImageListItem, ImageListItemBar, Typography } from "@mui/material";
-import MedPic1 from '../portfolioPictures/MedicationSite1.png';
-import { backgroundStyle, buttonStyle, centerItem, flexWrapperInnerStyle, titleContainer, titleStyle } from "../styles";
+import { Box, ImageListItem, ImageListItemBar, Typography } from "@mui/material";
+import React from 'react';
+import sitePic1 from '../portfolioPictures/LolSite1.gif';
+import { backgroundStyle, centerItem, flexWrapperInnerStyle, flexWrapperOuterStyle, titleContainer, titleStyle } from "../styles";
 
 
 const picEffect = {
@@ -34,16 +35,12 @@ const imgTextEffect = {
     }
 } as const
 
-export const GitHub = () => {
+export const LolStats = () => {
 
     return (
-        <Box sx={{ ...flexWrapperInnerStyle, ...backgroundStyle, flexDirection: 'column' }}>
+        <Box sx={{ ...flexWrapperOuterStyle, ...backgroundStyle, flexDirection: 'column', justifyContent: 'space-evenly' }}>
             <Box sx={{ flexDirection: 'column', ...flexWrapperInnerStyle, width: '100%', alignItems: 'center', ...titleContainer }}>
-
-                <Typography variant="body1" sx={{ ...titleStyle, textAlign: 'center' }}>Project 1</Typography>
-                <Button sx={{ ...buttonStyle }} onClick={() => window.open('https://github.com/Spotexx', "_blank")}>
-                    <Typography variant={'body1'}>View My GitHub Profile </Typography>
-                </Button>
+                <Typography variant="body1" sx={{ ...titleStyle, textAlign: 'center' }}>Lol Stats Tracker</Typography>
             </Box>
             <Box sx={{ ...flexWrapperInnerStyle, height: ['600px', '600px', '700px'], flexDirection: ['column', 'column', 'column', 'row'] }}>
                 <Box sx={{ flex: [1, 2], height: '100%' }}>
@@ -52,20 +49,21 @@ export const GitHub = () => {
 
                             <img
                                 style={{ maxHeight: '100%', maxWidth: '100%' }}
-                                src={MedPic1} alt="MedPic1"
+                                src={sitePic1}
+                                alt="sitePic1"
                             />
                             <div>
                                 <ImageListItemBar
-                                    title={'Medication Tracker'}
-                                    subtitle={'https://github.com/moonryc/moonmeds/'}
+                                    title={'Champion stats tracker'}
+                                    subtitle={'https://github.com/Spotexx/lolstats (code depricated)'}
                                 />
                             </div>
                             <Typography sx={{ ...titleStyle, ...imgTextEffect }} onClick={() => window.open('https://moonmeds.herokuapp.com/', "_blank")}>
-                                <Typography sx={{ ...titleStyle, color: 'white' }}>Medication Tracker</Typography>
+                                <Typography sx={{ ...titleStyle, color: 'white' }}>Champion Stats Tracker</Typography>
                                 <Typography sx={{ fontSize: '2.5rem' }}>
                                     Tags:
                                     <br />
-                                    React, Material-UI, Redux, Typescript, Date-FNS, React Router, Responsive Design
+                                    React, Material-UI, Hook Router, Responsive design, papaparse
                                 </Typography>
                             </Typography>
                         </ImageListItem>
