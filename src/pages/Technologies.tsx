@@ -36,6 +36,7 @@ export const Technologies = () => {
                     ...flexWrapperInnerStyle, ...backgroundStyle,
                     justifyContent: "space-evenly",
                     alignContent: "space-evenly",
+                    height: "95%",
                 }}
             >
                 {technologyIcons.map((item) => {
