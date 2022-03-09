@@ -1,10 +1,73 @@
-import { Box, Typography } from "@mui/material";
-import { backgroundStyle, flexWrapperOuterStyle } from "../styles";
+import { Box, Grid, Rating, Typography } from "@mui/material";
+import { ReactComponent as BootstrapSVG } from "../picturesOther/svg/bootstrap.svg";
+import { ReactComponent as CssSVG } from "../picturesOther/svg/css.svg";
+import { ReactComponent as ExpressSVG } from "../picturesOther/svg/express.svg";
+import { ReactComponent as GithubSVG } from "../picturesOther/svg/github.svg";
+import { ReactComponent as HtmlSVG } from "../picturesOther/svg/html.svg";
+import { ReactComponent as JavascriptSVG } from "../picturesOther/svg/javascript.svg";
+import { ReactComponent as MaterialUiSVG } from "../picturesOther/svg/materialui.svg";
+import { ReactComponent as MongoSVG } from "../picturesOther/svg/mongodb.svg";
+import { ReactComponent as MysqlSVG } from "../picturesOther/svg/mysql.svg";
+import { ReactComponent as NodeSVG } from "../picturesOther/svg/node.svg";
+import { ReactComponent as ReactSVG } from "../picturesOther/svg/react.svg";
+import { ReactComponent as TypescriptSVG } from "../picturesOther/svg/typescript.svg";
+import { backgroundStyle, flexWrapperInnerStyle, flexWrapperOuterStyle } from "../styles";
+
+const technologyIcons = [
+    { icon: <ReactSVG />, rating: 5, title: "React" },
+    { icon: <JavascriptSVG />, rating: 5, title: "JavaScript" },
+    { icon: <HtmlSVG />, rating: 5, title: "HTML" },
+    { icon: <CssSVG />, rating: 5, title: "CSS" },
+    { icon: <MaterialUiSVG />, rating: 5, title: "Material-UI" },
+    { icon: <NodeSVG />, rating: 5, title: "Node" },
+    { icon: <GithubSVG />, rating: 5, title: "GitHub" },
+    { icon: <ExpressSVG />, rating: 5, title: "Express" },
+    { icon: <MongoSVG />, rating: 5, title: "MongoDB" },
+    { icon: <MysqlSVG />, rating: 5, title: "MySQL" },
+    { icon: <TypescriptSVG />, rating: 5, title: "TypeScript" },
+    { icon: <BootstrapSVG />, rating: 5, title: "Bootstrap" },
+]
 
 export const Technologies = () => {
     return (
         <Box sx={{ ...flexWrapperOuterStyle, ...backgroundStyle }}>
-            <Typography variant={'body1'} sx={{ fontSize: '2rem', textAlign: 'center', margin: '30px' }}>•HTML •CSS •Javascript •React JS •Material UI •Responsive Design •MongoDB •Express •Node</Typography>
+            <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+                sx={{
+                    ...flexWrapperInnerStyle, ...backgroundStyle,
+                    justifyContent: "space-evenly",
+                    alignContent: "space-evenly",
+                }}
+            >
+                {technologyIcons.map((item) => {
+                    return (
+
+                        <Grid item xs={6} sm={5} md={4} lg={3} key={item.title} container style={{
+                            paddingLeft: "2.5vw",
+                            paddingRight: "2.5vw",
+                            height: "7%",
+                            width: "7%",
+                            textAlign: "center",
+                            justifyContent: "space-evenly",
+                            alignContent: "space-evenly",
+                            alignItems: "center"
+                        }}>
+                            <Grid sx={{
+                                height: "100%",
+                                width: "100%"
+                            }} item xs={12}>
+                                {item.icon}
+                            </Grid>
+
+                            <Grid item xs={12}>
+                                <Typography variant="h6" component="h2">{item.title}</Typography><br />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Rating name="read-only" precision={0.5} value={item.rating} readOnly />
+                            </Grid>
+                        </Grid>
+                    )
+                })}
+            </Grid>
         </Box>
     )
 }   
