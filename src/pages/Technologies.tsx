@@ -37,36 +37,29 @@ export const Technologies = () => {
                     justifyContent: "space-evenly",
                     alignContent: "space-evenly",
                     height: "95%",
+
+                    padding: ["2.5vw", "5vw", "10vw"],
                 }}
             >
                 {technologyIcons.map((item) => {
                     return (
 
-                        <Grid item xs={4} sm={3} md={2} lg={2} key={item.title} container style={{
-                            paddingLeft: "2.5vw",
-                            paddingRight: "2.5vw",
-                            height: "7%",
-                            width: "7%",
+                        <Grid item xs={4} sm={3} md={2} lg={2} key={item.title} container sx={{
                             textAlign: "center",
                             justifyContent: "space-evenly",
                             alignContent: "space-around",
                             alignItems: "center"
                         }}>
-                            <Paper sx={{ width: 'auto', height: 'auto', p: '5%' }}>
-                                <Grid sx={{
-                                    height: "300%",
-                                    width: "100%"
-                                }} item xs={12}>
-                                    {item.icon}
-                                </Grid>
-
-                                <Grid item xs={12}>
+                            <Grid sx={{}} item >
+                                <Paper sx={{ width: 'fit-content', height: 'auto', p: '10%' }}>
+                                    <Box sx={{ height: '10vh', width: '100%' }}>
+                                        {item.icon}
+                                    </Box>
                                     <Typography variant="h6" component="h2">{item.title}</Typography><br />
-                                </Grid>
-                                <Grid item xs={12}>
                                     <Rating name="read-only" precision={0.5} value={item.rating} readOnly />
-                                </Grid>
-                            </Paper>
+                                </Paper>
+                            </Grid>
+
                         </Grid>
 
                     )
