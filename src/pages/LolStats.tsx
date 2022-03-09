@@ -1,14 +1,14 @@
 
-import { Box, ImageListItem, ImageListItemBar, Typography } from "@mui/material";
+import { Box, ImageListItem, ImageListItemBar, Paper, Typography } from "@mui/material";
 import React from 'react';
-import sitePic1 from '../portfolioPictures/LolSite1.gif';
+import sitePic1 from '../portfolioPictures/LolSite1.png';
 import { backgroundStyle, centerItem, flexWrapperInnerStyle, flexWrapperOuterStyle, titleContainer, titleStyle } from "../styles";
 
 
 const picEffect = {
     position: 'relative',
     overflow: 'hidden',
-    width: '90%',
+    width: '70%',
     height: '90%',
     '&:hover img': {
         transition: 'all 0.5s ease-in-out',
@@ -38,39 +38,42 @@ const imgTextEffect = {
 export const LolStats = () => {
 
     return (
-        <Box sx={{ ...flexWrapperOuterStyle, ...backgroundStyle, flexDirection: 'column', justifyContent: 'space-evenly' }}>
-            <Box sx={{ flexDirection: 'column', ...flexWrapperInnerStyle, width: '100%', alignItems: 'center', ...titleContainer }}>
-                <Typography variant="body1" sx={{ ...titleStyle, textAlign: 'center' }}>Lol Stats Tracker</Typography>
-            </Box>
-            <Box sx={{ ...flexWrapperInnerStyle, height: ['600px', '600px', '700px'], flexDirection: ['column', 'column', 'column', 'row'] }}>
-                <Box sx={{ flex: [1, 2], height: '100%' }}>
-                    <Box sx={{ ...flexWrapperInnerStyle, flexDirection: 'column', ...centerItem }}>
-                        <ImageListItem sx={{ ...picEffect }}>
-
-                            <img
-                                style={{ maxHeight: '100%', maxWidth: '100%' }}
-                                src={sitePic1}
-                                alt="sitePic1"
-                            />
-                            <div>
-                                <ImageListItemBar
-                                    title={'Champion stats tracker'}
-                                    subtitle={'https://github.com/Spotexx/lolstats (code depricated)'}
-                                />
-                            </div>
-                            <Typography sx={{ ...titleStyle, ...imgTextEffect }} onClick={() => window.open('https://moonmeds.herokuapp.com/', "_blank")}>
-                                <Typography sx={{ ...titleStyle, color: 'white' }}>Champion Stats Tracker</Typography>
-                                <Typography sx={{ fontSize: '2.5rem' }}>
-                                    Tags:
-                                    <br />
-                                    React, Material-UI, Hook Router, Responsive design, papaparse
-                                </Typography>
-                            </Typography>
-                        </ImageListItem>
-                    </Box>
-
+        <Box sx={{ ...flexWrapperOuterStyle, ...backgroundStyle, flexDirection: 'column', justifyContent: 'space-evenly', alignItems: 'center' }}>
+            <Paper sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '60%', padding: '20px' }}>
+                <Box sx={{ flexDirection: 'column', ...flexWrapperInnerStyle, width: '70%', alignItems: 'center', ...titleContainer }}>
+                    <Typography variant="body1" sx={{ ...titleStyle, textAlign: 'center' }}>Lol Stats Tracker</Typography>
                 </Box>
-            </Box>
+                <Box sx={{ ...flexWrapperInnerStyle, height: 'auto', width: '100%', flexDirection: ['column', 'column', 'column', 'row'] }}>
+                    <Box sx={{ flex: [1, 2], height: '100%', width: '90%', }}>
+                        <Box sx={{ ...flexWrapperInnerStyle, flexDirection: 'column', ...centerItem }}>
+                            <ImageListItem sx={{ ...picEffect }}>
+
+                                <img
+                                    style={{ width: '100%', }}
+                                    src={sitePic1}
+                                    alt="sitePic1"
+                                />
+                                <div>
+                                    <ImageListItemBar
+                                        sx={{ width: '100%' }}
+                                        title={'Champion stats tracker'}
+                                        subtitle={'https://github.com/Spotexx/lolstats (code depricated)'}
+                                    />
+                                </div>
+                                <Typography sx={{ ...titleStyle, ...imgTextEffect }} onClick={() => window.open('http://lolstatsportfolio.herokuapp.com/', "_blank")}>
+                                    <Typography sx={{ ...titleStyle, color: 'white' }}>Champion Stats Tracker</Typography>
+                                    <Typography sx={{ fontSize: '2.5rem' }}>
+                                        Tags:
+                                        <br />
+                                        React, Material-UI, Hook Router, Responsive design, papaparse
+                                    </Typography>
+                                </Typography>
+                            </ImageListItem>
+                        </Box>
+
+                    </Box>
+                </Box>
+            </Paper>
         </Box>
     );
 };

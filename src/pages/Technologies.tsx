@@ -1,4 +1,4 @@
-import { Box, Grid, Rating, Typography } from "@mui/material";
+import { Box, Grid, Paper, Rating, Typography } from "@mui/material";
 import { ReactComponent as BootstrapSVG } from "../picturesOther/svg/bootstrap.svg";
 import { ReactComponent as CssSVG } from "../picturesOther/svg/css.svg";
 import { ReactComponent as ExpressSVG } from "../picturesOther/svg/express.svg";
@@ -42,33 +42,36 @@ export const Technologies = () => {
                 {technologyIcons.map((item) => {
                     return (
 
-                        <Grid item xs={6} sm={5} md={4} lg={3} key={item.title} container style={{
+                        <Grid item xs={4} sm={3} md={2} lg={2} key={item.title} container style={{
                             paddingLeft: "2.5vw",
                             paddingRight: "2.5vw",
                             height: "7%",
                             width: "7%",
                             textAlign: "center",
                             justifyContent: "space-evenly",
-                            alignContent: "space-evenly",
+                            alignContent: "space-around",
                             alignItems: "center"
                         }}>
-                            <Grid sx={{
-                                height: "100%",
-                                width: "100%"
-                            }} item xs={12}>
-                                {item.icon}
-                            </Grid>
+                            <Paper sx={{ width: 'auto', height: 'auto', p: '5%' }}>
+                                <Grid sx={{
+                                    height: "300%",
+                                    width: "100%"
+                                }} item xs={12}>
+                                    {item.icon}
+                                </Grid>
 
-                            <Grid item xs={12}>
-                                <Typography variant="h6" component="h2">{item.title}</Typography><br />
-                            </Grid>
-                            <Grid item xs={12}>
-                                <Rating name="read-only" precision={0.5} value={item.rating} readOnly />
-                            </Grid>
+                                <Grid item xs={12}>
+                                    <Typography variant="h6" component="h2">{item.title}</Typography><br />
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <Rating name="read-only" precision={0.5} value={item.rating} readOnly />
+                                </Grid>
+                            </Paper>
                         </Grid>
+
                     )
                 })}
             </Grid>
-        </Box>
+        </Box >
     )
 }   
