@@ -41,7 +41,6 @@ export const LolStats = () => {
         <Box sx={{ ...flexWrapperOuterStyle, ...backgroundStyle, flexDirection: 'column', justifyContent: 'space-evenly', alignItems: 'center' }}>
             <Paper sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '60%', padding: '20px' }}>
                 <Box sx={{ flexDirection: 'column', ...flexWrapperInnerStyle, width: '70%', alignItems: 'center', ...titleContainer }}>
-                    <Typography variant="body1" sx={{ ...titleStyle, textAlign: 'center' }}>Lol Stats Tracker</Typography>
                 </Box>
                 <Box sx={{ ...flexWrapperInnerStyle, height: 'auto', width: '100%', flexDirection: ['column', 'column', 'column', 'row'] }}>
                     <Box sx={{ flex: [1, 2], height: '100%', width: '90%', }}>
@@ -61,11 +60,8 @@ export const LolStats = () => {
                                     />
                                 </div>
                                 <Typography sx={{ ...titleStyle, ...imgTextEffect }} onClick={() => window.open('http://lolstatsportfolio.herokuapp.com/', "_blank")}>
-                                    <Typography sx={{ ...titleStyle, color: 'white' }}>Champion Stats Tracker</Typography>
                                     <Typography sx={{ fontSize: '2.5rem' }}>
-                                        Tags:
-                                        <br />
-                                        React, Material-UI, Hook Router, Responsive design, papaparse
+                                        Click to view live version
                                     </Typography>
                                 </Typography>
                             </ImageListItem>
@@ -73,7 +69,16 @@ export const LolStats = () => {
 
                     </Box>
                 </Box>
+                <Typography sx={{ fontSize: '2.5rem' }}>Description:</Typography>
+                <Typography sx={{ fontSize: '1.5rem', textAlign: 'justify' }}>
+                    A passion project built in ReactJS to manipulate and view data about various characters in League of Legends.
+                    I was the Sole author on this project responsible for both the front-end and back end. LolStats makes use of:
+
+                </Typography>
+                <Typography sx={{ fontSize: '1.5rem', textAlign: 'justify' }}>
+                    React js, Material UI, Chart JS, PapaParse, Node, GitHub, Heroku.
+                </Typography>
             </Paper>
-        </Box>
+        </Box >
     );
 };

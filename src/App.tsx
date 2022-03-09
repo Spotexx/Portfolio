@@ -11,7 +11,10 @@ import Pagify from './react-mui-pagify/Pagify/index';
 
 export const App = () => {
     return (
-        //todo: take of lol stats gif /  height: auto / shorter elevator speech move techs into another page
+        //todo: SVG FIX MONGO DB, HTML, JS, CSS
+        //todo: add description to champ tracker paper and change hover text to 
+        //todo: change color and fonts
+        //create custom scrollbar
         <Box >
             <Pagify>
                 <Home />

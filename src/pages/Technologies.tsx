@@ -37,7 +37,6 @@ export const Technologies = () => {
                     justifyContent: "space-evenly",
                     alignContent: "space-evenly",
                     height: "95%",
-
                     padding: ["2.5vw", "5vw", "10vw"],
                 }}
             >

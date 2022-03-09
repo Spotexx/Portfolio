@@ -1,5 +1,5 @@
 
-import { Box, ImageListItem, ImageListItemBar, Typography } from "@mui/material";
+import { Box, ImageListItem, ImageListItemBar, Paper, Typography } from "@mui/material";
 import MedPic1 from '../portfolioPictures/MedicationSite1.png';
 import { backgroundStyle, centerItem, flexWrapperInnerStyle, flexWrapperOuterStyle, titleContainer, titleStyle } from "../styles";
 
@@ -37,38 +37,46 @@ const imgTextEffect = {
 export const MedicationTracker = () => {
 
     return (
-        <Box sx={{ ...flexWrapperOuterStyle, ...backgroundStyle, flexDirection: 'column', justifyContent: 'space-evenly' }}>
-            <Box sx={{ flexDirection: 'column', ...flexWrapperInnerStyle, width: '100%', alignItems: 'center', ...titleContainer }}>
-                <Typography variant="body1" sx={{ ...titleStyle, textAlign: 'center' }}>Medication Tracker</Typography>
-            </Box>
-            <Box sx={{ ...flexWrapperInnerStyle, height: ['600px', '600px', '700px'], flexDirection: ['column', 'column', 'column', 'row'] }}>
-                <Box sx={{ flex: [1, 2], height: '100%' }}>
-                    <Box sx={{ ...flexWrapperInnerStyle, flexDirection: 'column', ...centerItem }}>
-                        <ImageListItem sx={{ ...picEffect }}>
-
-                            <img
-                                style={{ maxHeight: '100%', maxWidth: '100%' }}
-                                src={MedPic1} alt="MedPic1"
-                            />
-                            <div>
-                                <ImageListItemBar
-                                    title={'Medication Tracker'}
-                                    subtitle={'https://github.com/moonryc/moonmeds/'}
-                                />
-                            </div>
-                            <Typography sx={{ ...titleStyle, ...imgTextEffect }} onClick={() => window.open('https://moonmeds.herokuapp.com/', "_blank")}>
-                                <Typography sx={{ ...titleStyle, color: 'white', fontSize: ['1rem', '1rem', '1.5rem', '2.5rem'] }}>Medication Tracker</Typography>
-                                <Typography sx={{ fontSize: ['1rem', '1rem', '1.5rem', '2.5rem'] }}>
-                                    Technologies used:
-                                    <br />
-                                    React, Material-UI, Redux, Typescript, Date-FNS, React Router, Responsive Design
-                                </Typography>
-                            </Typography>
-                        </ImageListItem>
-                    </Box>
-
+        <Box sx={{ ...flexWrapperOuterStyle, ...backgroundStyle, flexDirection: 'column', justifyContent: 'space-evenly', alignItems: 'center' }}>
+            <Paper sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '60%', padding: '20px' }}>
+                <Box sx={{ flexDirection: 'column', ...flexWrapperInnerStyle, width: '70%', alignItems: 'center', ...titleContainer }}>
                 </Box>
-            </Box>
+                <Box sx={{ ...flexWrapperInnerStyle, height: 'auto', width: '100%', flexDirection: ['column', 'column', 'column', 'row'] }}>
+                    <Box sx={{ flex: [1, 2], height: '100%', width: '90%', }}>
+                        <Box sx={{ ...flexWrapperInnerStyle, flexDirection: 'column', ...centerItem }}>
+                            <ImageListItem sx={{ ...picEffect }}>
+
+                                <img
+                                    style={{ width: '100%', }}
+                                    src={MedPic1}
+                                    alt="sitePic1"
+                                />
+                                <div>
+                                    <ImageListItemBar
+                                        title={'Medication Tracker'}
+                                        subtitle={'https://moonmeds.herokuapp.com/'}
+                                    />
+                                </div>
+                                <Typography sx={{ ...titleStyle, ...imgTextEffect }} onClick={() => window.open('http://lolstatsportfolio.herokuapp.com/', "_blank")}>
+                                    <Typography sx={{ fontSize: '2.5rem' }}>
+                                        Click to view live version
+                                    </Typography>
+                                </Typography>
+                            </ImageListItem>
+                        </Box>
+
+                    </Box>
+                </Box>
+                <Typography sx={{ fontSize: '2.5rem' }}>Description:</Typography>
+                <Typography sx={{ fontSize: '1.5rem', textAlign: 'justify' }}>
+                    A medication Tracker built to track various medications on a calendar and dashboard view.
+                    Co-developer mainly responsible for the frontend in a highly collaborative environment using GitHub.
+                    This medication tracker was made using:
+                </Typography>
+                <Typography sx={{ fontSize: '1.5rem', textAlign: 'justify' }}>
+                    React JS, Material UI, Typescript, Heroku, Express JS, Node, GitHub
+                </Typography>
+            </Paper>
         </Box>
     );
 };
