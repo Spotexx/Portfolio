@@ -19,13 +19,13 @@ const technologyIcons = [
     { icon: <HtmlSVG />, rating: 5, title: "HTML" },
     { icon: <CssSVG />, rating: 5, title: "CSS" },
     { icon: <MaterialUiSVG />, rating: 5, title: "Material-UI" },
-    { icon: <NodeSVG />, rating: 5, title: "Node" },
-    { icon: <GithubSVG />, rating: 5, title: "GitHub" },
-    { icon: <ExpressSVG />, rating: 5, title: "Express" },
-    { icon: <MongoSVG />, rating: 5, title: "MongoDB" },
-    { icon: <MysqlSVG />, rating: 5, title: "MySQL" },
-    { icon: <TypescriptSVG />, rating: 5, title: "TypeScript" },
-    { icon: <BootstrapSVG />, rating: 5, title: "Bootstrap" },
+    { icon: <GithubSVG />, rating: 4.5, title: "GitHub" },
+    { icon: <BootstrapSVG />, rating: 4.5, title: "Bootstrap" },
+    { icon: <NodeSVG />, rating: 4, title: "Node" },
+    { icon: <ExpressSVG />, rating: 4, title: "Express" },
+    { icon: <TypescriptSVG />, rating: 3.5, title: "TypeScript" },
+    { icon: <MysqlSVG />, rating: 3, title: "MySQL" },
+    { icon: <MongoSVG />, rating: 3, title: "MongoDB" },
 ]
 
 export const Technologies = () => {
