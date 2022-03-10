@@ -11,7 +11,6 @@ import Pagify from './react-mui-pagify/Pagify/index';
 
 export const App = () => {
     return (
-        //todo: change color and fonts
         //create custom scrollbar
         <Box >
             <Pagify>
