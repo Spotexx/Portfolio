@@ -51,11 +51,11 @@ export const Technologies = () => {
                         }}>
                             <Grid sx={{}} item >
                                 <Paper sx={{ width: 'fit-content', height: 'auto', p: '10%' }}>
-                                    <Box sx={{ height: '10vh', width: '100%' }}>
+                                    <Box sx={{ height: ['5vh', '5vh', '10vh'], width: 'auto' }}>
                                         {item.icon}
                                     </Box>
-                                    <Typography variant="h6" component="h2">{item.title}</Typography><br />
-                                    <Rating name="read-only" precision={0.5} value={item.rating} readOnly />
+                                    <Typography variant="h6" component="h2" sx={{ width: 'max-content', textAlign: 'center', margin: '0 auto' }}>{item.title}</Typography><br />
+                                    <Rating name="read-only" precision={0.5} value={item.rating} size='small' readOnly />
                                 </Paper>
                             </Grid>
 

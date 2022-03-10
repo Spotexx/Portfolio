@@ -11,7 +11,6 @@ import Pagify from './react-mui-pagify/Pagify/index';
 
 export const App = () => {
     return (
-        //todo: SVG FIX MONGO DB, HTML, JS, CSS
         //todo: add description to champ tracker paper and change hover text to 
         //todo: change color and fonts
         //create custom scrollbar
@@ -20,8 +19,8 @@ export const App = () => {
                 <Home />
                 <LinkedIn />
                 <Technologies />
-                <MedicationTracker />
                 <LolStats />
+                <MedicationTracker />
                 <LinkTree />
             </Pagify >
         </Box >
