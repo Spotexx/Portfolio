@@ -11,7 +11,7 @@ import { ReactComponent as MysqlSVG } from "../picturesOther/svg/mysql.svg";
 import { ReactComponent as NodeSVG } from "../picturesOther/svg/node.svg";
 import { ReactComponent as ReactSVG } from "../picturesOther/svg/react.svg";
 import { ReactComponent as TypescriptSVG } from "../picturesOther/svg/typescript.svg";
-import { backgroundStyle, flexWrapperInnerStyle, flexWrapperOuterStyle } from "../styles";
+import { backgroundStyle, flexWrapperInnerStyle, flexWrapperOuterStyle, paperBackgroundStyle } from "../styles";
 
 const technologyIcons = [
     { icon: <ReactSVG />, rating: 5, title: "React" },
@@ -50,7 +50,7 @@ export const Technologies = () => {
                             alignItems: "center"
                         }}>
                             <Grid sx={{}} item >
-                                <Paper sx={{ width: 'fit-content', height: 'auto', p: '10%' }}>
+                                <Paper sx={{ ...paperBackgroundStyle, width: 'fit-content', height: 'auto', p: '10%' }}>
                                     <Box sx={{ height: ['5vh', '5vh', '10vh'], width: 'auto' }}>
                                         {item.icon}
                                     </Box>

@@ -21,6 +21,10 @@ export const centerItem = {
 export const backgroundStyle = {
     bgcolor: 'primary.main'
 }
+
+export const paperBackgroundStyle = {
+    bgcolor: 'background.paper'
+}
 export const backdropImgStyle = {
     position: 'absolute',
     top: 0,
