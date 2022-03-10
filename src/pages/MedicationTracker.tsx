@@ -41,7 +41,7 @@ export const MedicationTracker = () => {
             <Paper sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '60%', padding: '20px' }}>
                 <Box sx={{ flexDirection: 'column', ...flexWrapperInnerStyle, width: '70%', alignItems: 'center', ...titleContainer }}>
                 </Box>
-                <Box sx={{ ...flexWrapperInnerStyle, height: 'auto', width: '100%', flexDirection: ['column', 'column', 'column', 'row'] }}>
+                <Box sx={{ ...flexWrapperInnerStyle, height: 'auto', width: '100%', flexDirection: ['column', 'column', 'column', 'row'], alignItems: 'center' }}>
                     <Box sx={{ flex: [1, 2], height: '100%', width: '90%', }}>
                         <Box sx={{ ...flexWrapperInnerStyle, flexDirection: 'column', ...centerItem }}>
                             <ImageListItem sx={{ ...picEffect }}>
@@ -73,7 +73,7 @@ export const MedicationTracker = () => {
                     Co-developer mainly responsible for the frontend in a highly collaborative environment using GitHub.
                     This medication tracker was made using:
                 </Typography>
-                <Typography sx={{ fontSize: '1.5rem', textAlign: 'justify' }}>
+                <Typography sx={{ fontSize: '1.5rem', textAlign: 'left', fontWeight: 'bold', width: '100%' }}>
                     React JS, Material UI, Typescript, Heroku, Express JS, Node, GitHub
                 </Typography>
             </Paper>

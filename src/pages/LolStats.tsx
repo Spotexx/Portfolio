@@ -8,7 +8,7 @@ import { backgroundStyle, centerItem, flexWrapperInnerStyle, flexWrapperOuterSty
 const picEffect = {
     position: 'relative',
     overflow: 'hidden',
-    width: '70%',
+    width: '90%',
     height: '90%',
     '&:hover img': {
         transition: 'all 0.5s ease-in-out',
@@ -34,7 +34,6 @@ const imgTextEffect = {
         opacity: '100',
     }
 } as const
-
 export const LolStats = () => {
 
     return (
@@ -42,8 +41,8 @@ export const LolStats = () => {
             <Paper sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '60%', padding: '20px' }}>
                 <Box sx={{ flexDirection: 'column', ...flexWrapperInnerStyle, width: '70%', alignItems: 'center', ...titleContainer }}>
                 </Box>
-                <Box sx={{ ...flexWrapperInnerStyle, height: 'auto', width: '100%', flexDirection: ['column', 'column', 'column', 'row'] }}>
-                    <Box sx={{ flex: [1, 2], height: '100%', width: '90%', }}>
+                <Box sx={{ ...flexWrapperInnerStyle, height: 'auto', width: '100%', flexDirection: ['column', 'column', 'column', 'row'], alignItems: 'center' }}>
+                    <Box sx={{ flex: [1, 2], height: '100%', width: '90%' }}>
                         <Box sx={{ ...flexWrapperInnerStyle, flexDirection: 'column', ...centerItem }}>
                             <ImageListItem sx={{ ...picEffect }}>
 
@@ -75,7 +74,7 @@ export const LolStats = () => {
                     I was the Sole author on this project responsible for both the front-end and back end. LolStats makes use of:
 
                 </Typography>
-                <Typography sx={{ fontSize: '1.5rem', textAlign: 'justify' }}>
+                <Typography sx={{ fontSize: '1.5rem', textAlign: 'left', fontWeight: 'bold', width: '100%' }}>
                     React js, Material UI, Chart JS, PapaParse, Node, GitHub, Heroku.
                 </Typography>
             </Paper>

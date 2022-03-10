@@ -1,12 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import { App } from './App';
-import reportWebVitals from './reportWebVitals';
 import { createTheme } from "@mui/material";
 import { StyledEngineProvider, ThemeProvider } from "@mui/material/styles";
+import React from 'react';
+import ReactDOM from 'react-dom';
 import { BrowserRouter } from "react-router-dom";
+import { App } from './App';
 import { UserContainer } from './Contexts/PageContext';
+import './index.css';
+import reportWebVitals from './reportWebVitals';
 
 
 
@@ -32,10 +32,10 @@ const theme = createTheme({
   spacing: [0, 4, 8, 16, 24, 32, 40, 48, 56, 64],
   typography: {
     h1: {
-      fontFamily: "Pacifico, Balsamiq Sans, cursive",
+      fontFamily: "Smooch Sans, Balsamiq Sans, cursive",
     },
     body1: {
-      fontFamily: "Balsamiq Sans, cursive",
+      fontFamily: "Smooch Sans, cursive",
     },
   },
 },
