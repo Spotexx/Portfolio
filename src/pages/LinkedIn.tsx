@@ -9,7 +9,7 @@ export const LinkedIn = () => {
         <Box sx={{ ...flexWrapperOuterStyle, ...backgroundStyle }}>
             <Container maxWidth='lg' sx={{ ...flexWrapperInnerStyle, alignItems: 'center', flexDirection: 'column', justifyContent: 'space-evenly' }}>
                 <ElevatedPaper>
-                    <Typography sx={{ padding: '30px', fontWeight: 'bold', textAlign: 'justify', ...textContentStyle }}>
+                    <Typography sx={{ padding: '30px', fontWeight: 'bold', textAlign: 'justify', ...textContentStyle, fontSize: ['20px', '30px', '35px', '40px'] }}>
                         <p>I am a <span style={{ color: 'red' }}>full-stack developer</span> and have a background in finance. I find manipulating data and growing my ability exciting. I am a problem solver and a team player. Because I have received so much assistance in my educational journey, I find myself giving back to people where possible. In addition to my almost <span style={{ color: 'red' }}>two years</span> of personal experience, I have recently earned a certificate in full-stack web development from the <span style={{ color: 'red' }}>University of Toronto</span>. I love learning new languages and seeing code in different ways. I enjoy working on software that I can practically use in my life. I am a front-end developer. I use HTML, CSS, JS, and can build apps <span style={{ color: 'red' }}>React JS</span>.</p>
                     </Typography>
                 </ElevatedPaper>

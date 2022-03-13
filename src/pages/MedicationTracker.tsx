@@ -1,5 +1,5 @@
 
-import { Box, ImageListItem, ImageListItemBar, Typography } from "@mui/material";
+import { Box, Chip, ImageListItem, ImageListItemBar, Typography } from "@mui/material";
 import { ElevatedPaper } from "../Components/ElevatedPaper";
 import MedPic1 from '../portfolioPictures/MedicationSite1.png';
 import { backgroundStyle, centerItem, flexWrapperInnerStyle, flexWrapperOuterStyle, titleContainer, titleStyle } from "../styles";
@@ -75,7 +75,7 @@ export const MedicationTracker = () => {
                     This medication tracker was made using:
                 </Typography>
                 <Typography sx={{ fontSize: '1.5rem', textAlign: 'left', fontWeight: 'bold', width: '100%' }}>
-                    React JS, Material UI, Typescript, Heroku, Express JS, Node, GitHub
+                    <Chip label="React JS" variant='outlined' color='secondary' /><Chip label="Material UI" variant='outlined' color='secondary' /><Chip label="TypeScript" variant='outlined' color='secondary' /> <Chip label="Heroku" variant='outlined' color='secondary' /><Chip label="Express JS" variant='outlined' color='secondary' /><Chip label="Node JS" variant='outlined' color='secondary' /> <Chip label="GitHub" variant='outlined' color='secondary' />
                 </Typography>
             </ElevatedPaper>
         </Box>

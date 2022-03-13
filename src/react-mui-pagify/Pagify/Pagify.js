@@ -136,7 +136,6 @@ export default class Pagify extends Component {
 				Bottom navigation with an icon for every element in the pagify component
 				*/}
 
-
 				{/* 
 				Handlers for scroll on desktop and mobile
 				Outer container just as big as screen
