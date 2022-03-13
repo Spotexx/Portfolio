@@ -1,6 +1,7 @@
 
-import { Box, ImageListItem, ImageListItemBar, Paper, Typography } from "@mui/material";
+import { Box, ImageListItem, ImageListItemBar, Typography } from "@mui/material";
 import React from 'react';
+import { ElevatedPaper } from "../Components/ElevatedPaper";
 import sitePic1 from '../portfolioPictures/LolSite1.png';
 import { backgroundStyle, centerItem, flexWrapperInnerStyle, flexWrapperOuterStyle, titleContainer, titleStyle } from "../styles";
 
@@ -38,7 +39,7 @@ export const LolStats = () => {
 
     return (
         <Box sx={{ ...flexWrapperOuterStyle, ...backgroundStyle, flexDirection: 'column', justifyContent: 'space-evenly', alignItems: 'center' }}>
-            <Paper sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '60%', padding: '20px' }}>
+            <ElevatedPaper sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '60%', padding: '20px' }}>
                 <Box sx={{ flexDirection: 'column', ...flexWrapperInnerStyle, width: '70%', alignItems: 'center', ...titleContainer }}>
                 </Box>
                 <Box sx={{ ...flexWrapperInnerStyle, height: 'auto', width: '100%', flexDirection: ['column', 'column', 'column', 'row'], alignItems: 'center' }}>
@@ -77,7 +78,7 @@ export const LolStats = () => {
                 <Typography sx={{ fontSize: '1.5rem', textAlign: 'left', fontWeight: 'bold', width: '100%' }}>
                     React js, Material UI, Chart JS, PapaParse, Node, GitHub, Heroku.
                 </Typography>
-            </Paper>
+            </ElevatedPaper>
         </Box >
     );
 };

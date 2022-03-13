@@ -13,20 +13,20 @@ import reportWebVitals from './reportWebVitals';
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#303736'
+      main: '#121212'
     },
     secondary: {
       main: '#6b574e'
     },
     text: {
-      primary: '#000000',
-      secondary: '#B0B3B8'
+      primary: '#ffffff',
+      secondary: '#b3b3b3'
     },
     background: {
       default: '#b3e5fc',
       //@ts-ignore
       pic: 'rgba(0,0,0,0.5)',
-      paper: '#305031',
+      paper: '#181818',
     }
   },
   spacing: [0, 4, 8, 16, 24, 32, 40, 48, 56, 64],

@@ -1,4 +1,5 @@
-import { Box, Grid, Paper, Rating, Typography } from "@mui/material";
+import { Box, Grid, Rating, Typography } from "@mui/material";
+import { ElevatedPaper } from "../Components/ElevatedPaper";
 import { ReactComponent as BootstrapSVG } from "../picturesOther/svg/bootstrap.svg";
 import { ReactComponent as CssSVG } from "../picturesOther/svg/css.svg";
 import { ReactComponent as ExpressSVG } from "../picturesOther/svg/express.svg";
@@ -11,7 +12,7 @@ import { ReactComponent as MysqlSVG } from "../picturesOther/svg/mysql.svg";
 import { ReactComponent as NodeSVG } from "../picturesOther/svg/node.svg";
 import { ReactComponent as ReactSVG } from "../picturesOther/svg/react.svg";
 import { ReactComponent as TypescriptSVG } from "../picturesOther/svg/typescript.svg";
-import { backgroundStyle, flexWrapperInnerStyle, flexWrapperOuterStyle, paperBackgroundStyle } from "../styles";
+import { backgroundStyle, flexWrapperInnerStyle, flexWrapperOuterStyle } from "../styles";
 
 const technologyIcons = [
     { icon: <ReactSVG />, rating: 5, title: "React" },
@@ -34,9 +35,6 @@ export const Technologies = () => {
             <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}
                 sx={{
                     ...flexWrapperInnerStyle, ...backgroundStyle,
-                    justifyContent: "space-evenly",
-                    alignContent: "space-evenly",
-                    height: "95%",
                     padding: ["2.5vw", "5vw", "10vw"],
                 }}
             >
@@ -49,15 +47,13 @@ export const Technologies = () => {
                             alignContent: "space-around",
                             alignItems: "center"
                         }}>
-                            <Grid sx={{}} item >
-                                <Paper sx={{ ...paperBackgroundStyle, width: 'fit-content', height: 'auto', p: '10%' }}>
-                                    <Box sx={{ height: ['5vh', '5vh', '10vh'], width: 'auto' }}>
-                                        {item.icon}
-                                    </Box>
-                                    <Typography variant="h6" component="h2" sx={{ width: 'max-content', textAlign: 'center', margin: '0 auto' }}>{item.title}</Typography><br />
-                                    <Rating name="read-only" precision={0.5} value={item.rating} size='small' readOnly />
-                                </Paper>
-                            </Grid>
+                            <ElevatedPaper sx={{ width: 'fit-content', height: 'auto', p: '10%' }}>
+                                <Box sx={{ height: ['5vh', '5vh', '10vh'], width: 'auto' }}>
+                                    {item.icon}
+                                </Box>
+                                <Typography variant="h6" component="h2" sx={{ width: 'max-content', textAlign: 'center', margin: '0 auto' }}>{item.title}</Typography><br />
+                                <Rating name="read-only" precision={0.5} value={item.rating} size='small' readOnly />
+                            </ElevatedPaper>
 
                         </Grid>
 
