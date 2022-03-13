@@ -1,5 +1,6 @@
 
-import { Box, ImageListItem, ImageListItemBar, Paper, Typography } from "@mui/material";
+import { Box, ImageListItem, ImageListItemBar, Typography } from "@mui/material";
+import { ElevatedPaper } from "../Components/ElevatedPaper";
 import MedPic1 from '../portfolioPictures/MedicationSite1.png';
 import { backgroundStyle, centerItem, flexWrapperInnerStyle, flexWrapperOuterStyle, titleContainer, titleStyle } from "../styles";
 
@@ -38,7 +39,7 @@ export const MedicationTracker = () => {
 
     return (
         <Box sx={{ ...flexWrapperOuterStyle, ...backgroundStyle, flexDirection: 'column', justifyContent: 'space-evenly', alignItems: 'center' }}>
-            <Paper sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '60%', padding: '20px' }}>
+            <ElevatedPaper sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '60%', padding: '20px' }}>
                 <Box sx={{ flexDirection: 'column', ...flexWrapperInnerStyle, width: '70%', alignItems: 'center', ...titleContainer }}>
                 </Box>
                 <Box sx={{ ...flexWrapperInnerStyle, height: 'auto', width: '100%', flexDirection: ['column', 'column', 'column', 'row'], alignItems: 'center' }}>
@@ -76,7 +77,7 @@ export const MedicationTracker = () => {
                 <Typography sx={{ fontSize: '1.5rem', textAlign: 'left', fontWeight: 'bold', width: '100%' }}>
                     React JS, Material UI, Typescript, Heroku, Express JS, Node, GitHub
                 </Typography>
-            </Paper>
+            </ElevatedPaper>
         </Box>
     );
 };

@@ -1,5 +1,6 @@
-import { Box, Button, Divider, Paper } from "@mui/material";
+import { Box, Button, Divider } from "@mui/material";
 import React from 'react';
+import { ElevatedPaper } from "../Components/ElevatedPaper";
 import circleFace from '../picturesOther/circleFace.png';
 import { backgroundStyle, flexWrapperInnerStyle, flexWrapperOuterStyle } from '../styles';
 //resume
@@ -8,7 +9,7 @@ const LinkTree = () => {
 
     return (
         <Box sx={{ ...flexWrapperOuterStyle, ...backgroundStyle, flexDirection: 'column', alignItems: 'center', justifyContent: 'space-evenly' }}>
-            <Paper sx={{ ...flexWrapperInnerStyle, flexDirection: 'column', alignItems: 'center', width: '60%', height: '60%', padding: '20px' }}>
+            <ElevatedPaper sx={{ ...flexWrapperInnerStyle, flexDirection: 'column', alignItems: 'center', width: '60%', height: '60%', padding: '20px' }}>
                 <img
                     style={{ maxHeight: '15vh', maxWidth: '15vh' }}
                     src={circleFace} alt="MedPic1"
@@ -21,9 +22,9 @@ const LinkTree = () => {
                     <Button variant="contained" color="secondary" href="mailto:tsanderson.023@gmail.com" target='_blank' style={{ width: '70%' }}>Email</Button>
 
                 </Box>
-            </Paper>
+            </ElevatedPaper>
         </Box>
     );
-};//position: pageId === 3? 'fixed': 'absolute'
+};
 
 export default LinkTree;
