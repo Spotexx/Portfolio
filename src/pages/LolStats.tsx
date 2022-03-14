@@ -45,7 +45,7 @@ export const LolStats = () => {
                 <Box sx={{ ...flexWrapperInnerStyle, height: 'auto', width: '100%', flexDirection: ['column', 'column', 'column', 'row'], alignItems: 'center' }}>
                     <Box sx={{ flex: [1, 2], height: '100%', width: '90%' }}>
                         <Box sx={{ ...flexWrapperInnerStyle, flexDirection: 'column', ...centerItem }}>
-                            <ImageListItem sx={{ ...picEffect }}>
+                            <ImageListItem sx={{ ...picEffect, position: 'relative' }}>
 
                                 <img
                                     style={{ width: '100%', }}
@@ -59,8 +59,8 @@ export const LolStats = () => {
                                         subtitle={'https://github.com/Spotexx/lolstats (code depricated)'}
                                     />
                                 </div>
-                                <Typography component={"div"} sx={{ ...titleStyle, ...imgTextEffect }} onClick={() => window.open('http://lolstatsportfolio.herokuapp.com/', "_blank")}>
-                                    <Typography component={"div"} sx={{ fontSize: '2.5rem', width: 'auto', margin: '0 auto', textAlign: 'center', color: 'white' }}>
+                                <Typography component={"span"} sx={{ ...titleStyle, ...imgTextEffect }} onClick={() => window.open('http://lolstatsportfolio.herokuapp.com/', "_blank")}>
+                                    <Typography component={"p"} sx={{ fontSize: '2.5rem', width: 'auto', margin: '0 auto', textAlign: 'center', color: 'white' }}>
                                         Click to view live version
                                     </Typography>
                                 </Typography>

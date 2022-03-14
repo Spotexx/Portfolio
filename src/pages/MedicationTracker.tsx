@@ -58,8 +58,8 @@ export const MedicationTracker = () => {
                                         subtitle={'https://moonmeds.herokuapp.com/'}
                                     />
                                 </div>
-                                <Typography component={"div"} sx={{ ...titleStyle, ...imgTextEffect }} onClick={() => window.open('http://lolstatsportfolio.herokuapp.com/', "_blank")}>
-                                    <Typography component={"div"} sx={{ fontSize: '2.5rem', width: 'auto', margin: '0 auto', textAlign: 'center', color: 'white' }}>
+                                <Typography component={"span"} sx={{ ...titleStyle, ...imgTextEffect }} onClick={() => window.open('http://lolstatsportfolio.herokuapp.com/', "_blank")}>
+                                    <Typography component={"p"} sx={{ fontSize: '2.5rem', width: 'auto', margin: '0 auto', textAlign: 'center', color: 'white' }}>
                                         Click to view live version
                                     </Typography>
                                 </Typography>
