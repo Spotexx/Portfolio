@@ -1,28 +1,32 @@
+import { Circle, CircleOutlined } from "@mui/icons-material";
 import { Box } from "@mui/material";
-import { useEffect, useState } from "react";
 import { ElevatedPaper } from "./ElevatedPaper";
 
 export const SectionedScrollBar = (props: any) => {
-    const [scrollTop, setScrollTop] = useState<number>(0);
 
-    useEffect(() => {
-        //calculates percent scrolled from top of page
-        const handleScroll = (e: any) => {
-            const scrollTop = e.target.scrollTop;
-            setScrollTop(scrollTop);
+
+    const ScrollPartition = (props: any) => {
+        if (props.id === props.page) {
+            console.log(props)
+            return (<Circle sx={{ margin: '5px' }} />)
         }
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
+        else {
+            console.log(props.id, props.page)
+            return (<CircleOutlined sx={{ margin: '5px' }} />)
         }
-    }, [])
+    }
 
     return (
         <Box sx={{
-            width: '30px', height: 'auto', position: 'fixed', right: '20px', top: '50%', zIndex: '1',
+            width: 'min-content', height: 'max-content', position: 'fixed', right: '20px', top: '50%', zIndex: '1', transform: 'translateY(-50%)',
         }} >
-            <ElevatedPaper sx={{ height: 'max-content', pt: '20px', pb: '20px', borderRadius: '15px' }}>
-                test test test test test test test test test test
+            <ElevatedPaper sx={{ height: 'max-content', pt: '20px', pb: '20px', borderRadius: '15px', borderColor: 'secondary.main', borderStyle: 'solid' }}>
+                <ScrollPartition id={0} page={props.page} />
+                <ScrollPartition id={1} page={props.page} />
+                <ScrollPartition id={2} page={props.page} />
+                <ScrollPartition id={3} page={props.page} />
+                <ScrollPartition id={4} page={props.page} />
+                <ScrollPartition id={5} page={props.page} />
             </ElevatedPaper>
 
         </Box >

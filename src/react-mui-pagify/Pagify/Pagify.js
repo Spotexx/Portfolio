@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import { SectionedScrollBar } from '../../Components/SectionedScrollBar';
 import Page from '../Page';
 import './Pagify.css';
 
@@ -70,7 +71,6 @@ export default class Pagify extends Component {
 		let cantUp = e.deltaY < 0 && upBlocked;
 		let cantDown = e.deltaY > 0 && downBlocked;
 
-		console.log( elem.scrollTop, this.state.height, elem.scrollHeight);
 
 		let shouldScroll = notAnimating && !cantUp && !cantDown && !this.animLocked;
 
@@ -132,14 +132,7 @@ export default class Pagify extends Component {
 	render() {
 		return (
 			<Fragment>
-				{/* 
-				Bottom navigation with an icon for every element in the pagify component
-				*/}
-
-				{/* 
-				Handlers for scroll on desktop and mobile
-				Outer container just as big as screen
-				*/}
+				<SectionedScrollBar page={this.state.currentPage} />
 				<div className="page-container" onWheel={this.handleParentWheel} onTouchStart={this.handleOnTouchStart} onTouchMove={this.handleOnTouchMove}>
 					{/* 
 					Inner container as big as all the pages
@@ -151,6 +144,7 @@ export default class Pagify extends Component {
 							let childWithSetPage = React.cloneElement(child, { setPage: this.setPage, currentPage: this.state.currentPage, width: this.state.width, height: this.state.height });
 
 							return <Page style={{width: this.state.width}} pageRef={this.state.pageRefs[keyIndex]} key={keyIndex} {...child.props}>
+								
 								{childWithSetPage}
 								{/*Spacer because navbar can be up to 112px tall*/}
 								
