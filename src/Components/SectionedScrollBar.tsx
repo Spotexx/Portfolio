@@ -18,7 +18,7 @@ export const SectionedScrollBar = (props: any) => {
 
     return (
         <Box sx={{
-            width: 'min-content', height: 'max-content', position: 'fixed', right: '20px', top: '50%', zIndex: '1', transform: 'translateY(-50%)',
+            width: 'min-content', height: 'max-content', position: 'fixed', right: '5px', top: '50%', zIndex: '1', transform: 'translateY(-50%)', display: ['none', 'none', 'block'],
         }} >
             <ElevatedPaper sx={{ height: 'max-content', pt: '20px', pb: '20px', borderRadius: '15px', borderColor: 'secondary.main', borderStyle: 'solid' }}>
                 <ScrollPartition id={0} page={props.page} />
