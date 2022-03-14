@@ -3,8 +3,9 @@ export const flexWrapperOuterStyle = {
     position: 'relative',
     display: 'flex',
     flexDirection: 'row',
-    height: ['91vh', '91vh', '91vh'],
-    width: '100vw'
+    height: '100vh',
+    width: '100vw',
+    overflow: 'hidden'
 } as any
 export const flexWrapperInnerStyle = {
     position: 'relative',
