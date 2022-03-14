@@ -1,5 +1,6 @@
 .page {
     background-color: #f5fafa;
+    overflow: auto;
     display: flex;
     flex-direction: column;
     scroll-behavior: smooth;
@@ -18,8 +19,11 @@
 
 .spacer-top {
     flex: 2;
+    background-color: #121212;
+
 }
 
 .spacer-bottom {
     flex: 2;
+    background-color: #121212;
 }
