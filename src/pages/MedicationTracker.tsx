@@ -58,8 +58,8 @@ export const MedicationTracker = () => {
                                         subtitle={'https://moonmeds.herokuapp.com/'}
                                     />
                                 </div>
-                                <Typography sx={{ ...titleStyle, ...imgTextEffect }} onClick={() => window.open('http://lolstatsportfolio.herokuapp.com/', "_blank")}>
-                                    <Typography sx={{ fontSize: '2.5rem', width: 'auto', margin: '0 auto', textAlign: 'center', color: 'white' }}>
+                                <Typography component={"div"} sx={{ ...titleStyle, ...imgTextEffect }} onClick={() => window.open('http://lolstatsportfolio.herokuapp.com/', "_blank")}>
+                                    <Typography component={"div"} sx={{ fontSize: '2.5rem', width: 'auto', margin: '0 auto', textAlign: 'center', color: 'white' }}>
                                         Click to view live version
                                     </Typography>
                                 </Typography>
@@ -68,13 +68,13 @@ export const MedicationTracker = () => {
 
                     </Box>
                 </Box>
-                <Typography sx={{ fontSize: '2.5rem' }}>Description:</Typography>
-                <Typography sx={{ fontSize: '1.5rem', textAlign: 'justify' }}>
+                <Typography component={"div"} sx={{ fontSize: '2.5rem' }}>Description:</Typography>
+                <Typography component={"div"} sx={{ fontSize: '1.5rem', textAlign: 'justify' }}>
                     A medication Tracker built to track various medications on a calendar and dashboard view.
                     Co-developer mainly responsible for the frontend in a highly collaborative environment using GitHub.
                     This medication tracker was made using:
                 </Typography>
-                <Typography sx={{ fontSize: '1.5rem', textAlign: 'left', fontWeight: 'bold', width: '100%' }}>
+                <Typography component={"div"} sx={{ fontSize: '1.5rem', textAlign: 'left', fontWeight: 'bold', width: '100%' }}>
                     <Chip label="React JS" variant='outlined' color='secondary' /><Chip label="Material UI" variant='outlined' color='secondary' /><Chip label="TypeScript" variant='outlined' color='secondary' /> <Chip label="Heroku" variant='outlined' color='secondary' /><Chip label="Express JS" variant='outlined' color='secondary' /><Chip label="Node JS" variant='outlined' color='secondary' /> <Chip label="GitHub" variant='outlined' color='secondary' />
                 </Typography>
             </ElevatedPaper>

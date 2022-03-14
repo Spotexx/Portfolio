@@ -7,18 +7,16 @@ export const SectionedScrollBar = (props: any) => {
 
     const ScrollPartition = (props: any) => {
         if (props.id === props.page) {
-            console.log(props)
             return (<Circle sx={{ margin: '5px' }} />)
         }
         else {
-            console.log(props.id, props.page)
             return (<CircleOutlined sx={{ margin: '5px' }} />)
         }
     }
 
     return (
         <Box sx={{
-            width: 'min-content', height: 'max-content', position: 'fixed', right: '5px', top: '50%', zIndex: '1', transform: 'translateY(-50%)', display: ['none', 'none', 'block'],
+            width: 'min-content', height: 'max-content', position: 'fixed', right: '10px', top: '50%', zIndex: '1', transform: 'translateY(-50%)', display: ['none', 'none', 'block'],
         }} >
             <ElevatedPaper sx={{ height: 'max-content', pt: '20px', pb: '20px', borderRadius: '15px', borderColor: 'secondary.main', borderStyle: 'solid' }}>
                 <ScrollPartition id={0} page={props.page} />
