@@ -56,7 +56,7 @@ export const LolStats = () => {
                                     <ImageListItemBar
                                         sx={{ width: '100%' }}
                                         title={'Champion stats tracker'}
-                                        subtitle={'https://github.com/Spotexx/lolstats (code depricated)'}
+                                        subtitle={'https://github.com/Spotexx/lolstats'}
                                     />
                                 </div>
                                 <Typography component={"span"} sx={{ ...titleStyle, ...imgTextEffect }} onClick={() => window.open('http://lolstatsportfolio.herokuapp.com/', "_blank")}>
