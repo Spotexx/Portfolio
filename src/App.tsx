@@ -10,7 +10,8 @@ import Pagify from './react-mui-pagify/Pagify/index';
 
 export const App = () => {
     return (
-        //create custom scrollbar
+        //click to auto scroll to section
+        //css star background
         <Pagify>
             <Home />
             <LinkedIn />
