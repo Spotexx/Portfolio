@@ -23,7 +23,7 @@ export const SectionedScrollBar = (props: any) => {
         else {
             return (
                 <Tooltip sx={{ margin: '5px' }} placement="left" title={props.title} arrow>
-                    <IconButton style={{ color: 'white' }} >
+                    <IconButton style={{ color: 'white' }} onClick={() => props.setPage(props.id)} >
                         <HomeOutlined sx={{ display: props.id === 0 ? 'block' : 'none' }} />
                         <AccountCircleOutlined sx={{ display: props.id === 1 ? 'block' : 'none' }} />
                         <SettingsOutlined sx={{ display: props.id === 2 ? 'block' : 'none' }} />
@@ -41,14 +41,13 @@ export const SectionedScrollBar = (props: any) => {
             width: 'min-content', height: 'max-content', position: 'fixed', right: '10px', top: '50%', zIndex: '100', transform: 'translateY(-50%)', display: ['none', 'none', 'block'],
         }} >
             <ElevatedPaper sx={{ height: 'max-content', pt: '20px', pb: '20px', borderRadius: '15px', borderColor: 'secondary.main', borderStyle: 'solid' }}>
-                <ScrollPartition id={0} page={props.page} title='Home' />
-                <ScrollPartition id={1} page={props.page} title='Introduction' />
-                <ScrollPartition id={2} page={props.page} title='Technologies' />
-                <ScrollPartition id={3} page={props.page} title='Project 1' />
-                <ScrollPartition id={4} page={props.page} title='Project 2' />
-                <ScrollPartition id={5} page={props.page} title='Contact Me' />
+                <ScrollPartition id={0} page={props.page} setPage={props.setPage} title='Home' />
+                <ScrollPartition id={1} page={props.page} setPage={props.setPage} title='Introduction' />
+                <ScrollPartition id={2} page={props.page} setPage={props.setPage} title='Technologies' />
+                <ScrollPartition id={3} page={props.page} setPage={props.setPage} title='Project 1' />
+                <ScrollPartition id={4} page={props.page} setPage={props.setPage} title='Project 2' />
+                <ScrollPartition id={5} page={props.page} setPage={props.setPage} title='Contact Me' />
             </ElevatedPaper>
-
         </Box >
     )
 }

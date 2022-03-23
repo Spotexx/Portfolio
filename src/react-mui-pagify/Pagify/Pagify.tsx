@@ -159,7 +159,7 @@ const Pagify = (props: any) => {
 
     return (
         <Fragment>
-            <SectionedScrollBar page={currentPage} />
+            <SectionedScrollBar page={currentPage} setPage={setCurrentPage} />
             <div
                 className="page-container"
                 onWheel={handleParentWheel}
@@ -186,9 +186,6 @@ const Pagify = (props: any) => {
                                 pageRef={pageRefs[keyIndex]}
                                 key={keyIndex} {...child.props}>
                                 {childWithSetPage}
-
-                                {/*Spacer because navbar can be up to 112px tall*/}
-                                {/* {child.props.nospacer ? "" : <div className="extra-scroll">&nbsp;</div>} */}
 
                             </Page>
                         )
