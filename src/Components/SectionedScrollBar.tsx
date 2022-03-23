@@ -1,4 +1,4 @@
-import { AccountCircle, AccountCircleOutlined, Call, CallOutlined, Folder, FolderOutlined, Home, HomeOutlined, Settings, SettingsOutlined } from '@mui/icons-material';
+import { Folder, FolderOutlined, Home, HomeOutlined, Info, InfoOutlined, IntegrationInstructions, IntegrationInstructionsOutlined, Mail, MailOutlined } from '@mui/icons-material';
 import { Box, IconButton, Tooltip } from "@mui/material";
 import { ElevatedPaper } from "./ElevatedPaper";
 
@@ -11,11 +11,11 @@ export const SectionedScrollBar = (props: any) => {
                 <Tooltip sx={{ margin: '5px' }} placement="left" title={props.title} arrow>
                     <IconButton style={{ color: 'white' }} >
                         <Home sx={{ display: props.id === 0 ? 'block' : 'none' }} />
-                        <AccountCircle sx={{ display: props.id === 1 ? 'block' : 'none' }} />
-                        <Settings sx={{ display: props.id === 2 ? 'block' : 'none' }} />
+                        <Info sx={{ display: props.id === 1 ? 'block' : 'none' }} />
+                        <IntegrationInstructions sx={{ display: props.id === 2 ? 'block' : 'none' }} />
                         <Folder sx={{ display: props.id === 3 ? 'block' : 'none' }} />
                         <Folder sx={{ display: props.id === 4 ? 'block' : 'none' }} />
-                        <Call sx={{ display: props.id === 5 ? 'block' : 'none' }} />
+                        <Mail sx={{ display: props.id === 5 ? 'block' : 'none' }} />
                     </IconButton>
                 </Tooltip>
             )
@@ -25,11 +25,11 @@ export const SectionedScrollBar = (props: any) => {
                 <Tooltip sx={{ margin: '5px' }} placement="left" title={props.title} arrow>
                     <IconButton style={{ color: 'white' }} onClick={() => props.setPage(props.id)} >
                         <HomeOutlined sx={{ display: props.id === 0 ? 'block' : 'none' }} />
-                        <AccountCircleOutlined sx={{ display: props.id === 1 ? 'block' : 'none' }} />
-                        <SettingsOutlined sx={{ display: props.id === 2 ? 'block' : 'none' }} />
+                        <InfoOutlined sx={{ display: props.id === 1 ? 'block' : 'none' }} />
+                        <IntegrationInstructionsOutlined sx={{ display: props.id === 2 ? 'block' : 'none' }} />
                         <FolderOutlined sx={{ display: props.id === 3 ? 'block' : 'none' }} />
                         <FolderOutlined sx={{ display: props.id === 4 ? 'block' : 'none' }} />
-                        <CallOutlined sx={{ display: props.id === 5 ? 'block' : 'none' }} />
+                        <MailOutlined sx={{ display: props.id === 5 ? 'block' : 'none' }} />
                     </IconButton>
                 </Tooltip>
             )
