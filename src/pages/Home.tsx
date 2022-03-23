@@ -43,7 +43,7 @@ export const Home = () => {
                         <Typography variant={'h1'} sx={{ ...titleStyle, fontSize: ['3rem', '4rem'], fontWeight: 'bold', textAlign: 'justify' }}>
                             Hello!
                         </Typography>
-                        <Typography variant={"body1"} sx={{ ...textContentStyle, fontSize: ['1.8rem', '3rem'], marginRight: [0, 0, 0, '-100px'], textAlign: 'justify', fontWeight: 'bold' }}>
+                        <Typography variant={"body1"} sx={{ ...textContentStyle, fontSize: ['1.6rem', '3rem'], marginRight: [0, 0, 0, '-100px'], textAlign: 'justify', fontWeight: 'bold' }}>
                             I'm Travis Anderson, a web developer with experience using
                             HTML, JavaScript, CSS, React, Material UI, MongoDB, Express, Node and MySQL.
                         </Typography>

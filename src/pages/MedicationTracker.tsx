@@ -69,11 +69,12 @@ export const MedicationTracker = () => {
                     </Box>
                 </Box>
                 <Typography component={"div"} sx={{ fontSize: '2.5rem' }}>Description:</Typography>
-                <Typography component={"div"} sx={{ fontSize: '1.5rem', textAlign: 'justify' }}>
+                <Typography component={"div"} sx={{ fontSize: ['1rem', , '1.5rem'], textAlign: 'justify' }}>
                     A medication Tracker built to track various medications on a calendar and dashboard view.
                     Co-developer mainly responsible for the frontend in a highly collaborative environment using GitHub.
                     This medication tracker was made using:
                 </Typography>
+                <Typography component={"div"} sx={{ fontSize: ['1rem', , '1.5rem'], textAlign: 'justify' }}><a href={"https://github.com/moonryc/moonmeds"}>https://github.com/moonryc/moonmeds</a></Typography>
                 <Typography component={"div"} sx={{ fontSize: '1.5rem', textAlign: 'left', fontWeight: 'bold', width: '100%' }}>
                     <Chip label="React JS" variant='outlined' color='secondary' /><Chip label="Material UI" variant='outlined' color='secondary' /><Chip label="TypeScript" variant='outlined' color='secondary' /> <Chip label="Heroku" variant='outlined' color='secondary' /><Chip label="Express JS" variant='outlined' color='secondary' /><Chip label="Node JS" variant='outlined' color='secondary' /> <Chip label="GitHub" variant='outlined' color='secondary' />
                 </Typography>
