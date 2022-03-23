@@ -32,10 +32,10 @@ const theme = createTheme({
   spacing: [0, 4, 8, 16, 24, 32, 40, 48, 56, 64],
   typography: {
     h1: {
-      fontFamily: "Smooch Sans, Balsamiq Sans, cursive",
+      fontFamily: "Chakra Petch, Balsamiq Sans, cursive",
     },
     body1: {
-      fontFamily: "Smooch Sans, cursive",
+      fontFamily: "Chakra Petch, cursive",
     },
   },
 },
