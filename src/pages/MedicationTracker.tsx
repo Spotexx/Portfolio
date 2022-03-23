@@ -70,9 +70,8 @@ export const MedicationTracker = () => {
                 </Box>
                 <Typography component={"div"} sx={{ fontSize: '2.5rem' }}>Description:</Typography>
                 <Typography component={"div"} sx={{ fontSize: ['1rem', '1rem', '1.5rem'], textAlign: 'justify' }}>
-                    A medication Tracker built to track various medications on a calendar and dashboard view.
-                    Co-developer mainly responsible for the frontend in a highly collaborative environment using GitHub.
-                    This medication tracker was made using:
+                    This is a medication Tracker I built to track various medications on a calendar and dashboard view.
+                    For this assignment I was a Co-developer mainly responsible for the frontend in a highly collaborative environment using GitHub.
                 </Typography>
                 <Typography component={"div"} sx={{ fontSize: ['1rem', '1rem', '1.5rem'], textAlign: 'justify' }}><a href={"https://github.com/moonryc/moonmeds"}>https://github.com/moonryc/moonmeds</a></Typography>
                 <Typography component={"div"} sx={{ fontSize: '1.5rem', textAlign: 'left', fontWeight: 'bold', width: '100%' }}>
