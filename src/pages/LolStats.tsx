@@ -70,11 +70,11 @@ export const LolStats = () => {
                     </Box>
                 </Box>
                 <Typography component={"div"} sx={{ fontSize: '2.5rem' }}>Description:</Typography>
-                <Typography component={"div"} sx={{ fontSize: ['1rem', , '1.5rem'], textAlign: 'justify' }}>
+                <Typography component={"div"} sx={{ fontSize: ['1rem', '1rem', '1.5rem'], textAlign: 'justify' }}>
                     This was a passion project that I built in ReactJS to manipulate and view data about various characters in the online game:League of Legends.
                     I was the Sole author on this project responsible for both the front-end and back-end.
                 </Typography>
-                <Typography component={"div"} sx={{ fontSize: ['1rem', , '1.5rem'], textAlign: 'justify' }}><a href={"https://github.com/Spotexx/lolstats"}>https://github.com/Spotexx/lolstats</a></Typography>
+                <Typography component={"div"} sx={{ fontSize: ['1rem', '1rem', '1.5rem'], textAlign: 'justify' }}><a href={"https://github.com/Spotexx/lolstats"}>https://github.com/Spotexx/lolstats</a></Typography>
 
                 <Typography component={"div"} sx={{ fontSize: '1.5rem', textAlign: 'left', fontWeight: 'bold', width: '100%' }}>
                     <Chip label="React JS" variant='outlined' color='secondary' /><Chip label="Material UI" variant='outlined' color='secondary' /><Chip label="Chart JS" variant='outlined' color='secondary' /><Chip label="PapaParse" variant='outlined' color='secondary' /><Chip label="Node" variant='outlined' color='secondary' /><Chip label="GitHub" variant='outlined' color='secondary' /><Chip label="Heroku" variant='outlined' color='secondary' />
