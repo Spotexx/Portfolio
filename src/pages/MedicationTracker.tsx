@@ -73,9 +73,17 @@ export const MedicationTracker = () => {
                     This is a medication Tracker I built to track various medications on a calendar and dashboard view.
                     For this assignment I was a Co-developer mainly responsible for the frontend in a highly collaborative environment using GitHub.
                 </Typography>
-                <Typography component={"div"} sx={{ fontSize: ['1rem', '1rem', '1.5rem'], textAlign: 'justify' }}><a href={"https://github.com/moonryc/moonmeds"}>https://github.com/moonryc/moonmeds</a></Typography>
+                <a href={"https://github.com/moonryc/moonmeds"}>
+                    <Typography component={"div"} sx={{ fontSize: ['1rem', '1rem', '1.5rem'], textAlign: 'justify', color: 'text.primary' }}>View GitHub</Typography>
+                </a>
                 <Typography component={"div"} sx={{ fontSize: '1.5rem', textAlign: 'left', fontWeight: 'bold', width: '100%' }}>
-                    <Chip label="React JS" variant='outlined' color='secondary' /><Chip label="Material UI" variant='outlined' color='secondary' /><Chip label="TypeScript" variant='outlined' color='secondary' /> <Chip label="Heroku" variant='outlined' color='secondary' /><Chip label="Express JS" variant='outlined' color='secondary' /><Chip label="Node JS" variant='outlined' color='secondary' /> <Chip label="GitHub" variant='outlined' color='secondary' />
+                    <Chip label="React JS" variant='outlined' color='secondary' />
+                    <Chip label="Material UI" variant='outlined' color='secondary' />
+                    <Chip label="TypeScript" variant='outlined' color='secondary' />
+                    <Chip label="Heroku" variant='outlined' color='secondary' />
+                    <Chip label="Express JS" variant='outlined' color='secondary' />
+                    <Chip label="Node JS" variant='outlined' color='secondary' />
+                    <Chip label="GitHub" variant='outlined' color='secondary' />
                 </Typography>
             </ElevatedPaper>
         </Box>

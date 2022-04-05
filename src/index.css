@@ -1,5 +1,6 @@
 body {
   height: 100%;
+  background-color: #121212;
   position: fixed;
   margin: 0;
   -webkit-overflow-scrolling: touch;

@@ -1,6 +1,7 @@
 .page {
-    background-color: #f5fafa;
+    background-color: #121212;
     overflow: auto;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     scroll-behavior: smooth;

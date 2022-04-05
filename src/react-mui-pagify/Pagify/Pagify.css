@@ -1,4 +1,4 @@
-.page-container {
+.page-container{
     height: 100vh;
     width: 100vw;
     display: block;
@@ -6,7 +6,9 @@
     position: relative;
 }
 
-
+.page-container::-webkit-scrollbar {
+    width: 0em;
+}
 
 .page-container::-webkit-scrollbar-track {}
 
@@ -15,12 +17,12 @@
     border-radius: 9999px;
 }
 
-.large-container {
+.large-container{
     position: absolute;
     transition: transform 1000ms ease;
 }
 
-.extra-scroll {
+.extra-scroll{
     width: 100%;
-    background-color: #121212;
+    min-height: 112px;
 }

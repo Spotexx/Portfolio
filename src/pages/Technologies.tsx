@@ -1,4 +1,4 @@
-import { Box, Grid, Rating, Typography } from "@mui/material";
+import { Box, Divider, Grid, Typography } from "@mui/material";
 import { ElevatedPaper } from "../Components/ElevatedPaper";
 import { ReactComponent as BootstrapSVG } from "../picturesOther/svg/bootstrap.svg";
 import { ReactComponent as CssSVG } from "../picturesOther/svg/css.svg";
@@ -47,12 +47,12 @@ export const Technologies = () => {
                             alignContent: "space-around",
                             alignItems: "center"
                         }}>
-                            <ElevatedPaper sx={{ width: 'fit-content', height: 'auto', p: '10%' }}>
+                            <ElevatedPaper sx={{ width: '70%', height: 'auto', p: '10%' }}>
                                 <Box sx={{ height: ['5vh', '5vh', '10vh'], width: 'auto' }}>
                                     {item.icon}
                                 </Box>
                                 <Typography variant="h6" component="h2" sx={{ width: 'max-content', textAlign: 'center', margin: '0 auto' }}>{item.title}</Typography><br />
-                                <Rating name="read-only" precision={0.5} value={item.rating} size='small' readOnly />
+                                <Divider color='secondary.light' />
                             </ElevatedPaper>
 
                         </Grid>

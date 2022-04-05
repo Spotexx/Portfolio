@@ -1,5 +1,5 @@
 import React, { createRef, Fragment, useEffect, useState } from 'react';
-import { SectionedScrollBar } from "../../Components/SectionedScrollBar";
+import { SectionedScrollBar } from '../../Components/SectionedScrollBar';
 import Page from "../Page/Page";
 import './Pagify.css';
 
@@ -160,6 +160,7 @@ const Pagify = (props: any) => {
     return (
         <Fragment>
             <SectionedScrollBar page={currentPage} setPage={setCurrentPage} />
+
             <div
                 className="page-container"
                 onWheel={handleParentWheel}
@@ -187,6 +188,8 @@ const Pagify = (props: any) => {
                                 key={keyIndex} {...child.props}>
                                 {childWithSetPage}
 
+                                {/*Spacer because navbar can be up to 112px tall*/}
+                                {/* {child.props.nospacer ? "" : <div className="extra-scroll">&nbsp;</div>} */}
                             </Page>
                         )
                     })}
