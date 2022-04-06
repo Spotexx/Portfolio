@@ -1,15 +1,17 @@
 body {
   height: 100%;
+  /* stops scroll to refresh on iOS */
   background-color: #121212;
   position: fixed;
   margin: 0;
   -webkit-overflow-scrolling: touch;
+  touch-action: none;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overscroll-behavior: none;
+  overscroll-behavior: contain;
 }
 
 code {
