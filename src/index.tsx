@@ -7,6 +7,7 @@ import { App } from './App';
 import { UserContainer } from './Contexts/PageContext';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import 'prevent-pull-refresh';
 
 
 
