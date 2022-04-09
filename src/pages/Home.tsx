@@ -1,6 +1,5 @@
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { Box, CardMedia, Container, Typography } from "@mui/material";
-import React from "react";
 import HomePic from '../picturesOther/HomePic.png';
 import MainPictureThin from '../picturesOther/MainPictureThin.png';
 import { backgroundStyle, flexWrapperInnerStyle, flexWrapperOuterStyle, textContentStyle, titleStyle } from "../styles";
