@@ -163,13 +163,48 @@ export const Appli = () => {
             width: "100%",
           }}
         >
-          <Chip label="React JS" variant="outlined" color="secondary" />
-          <Chip label="Material UI" variant="outlined" color="secondary" />
-          <Chip label="TypeScript" variant="outlined" color="secondary" />
-          <Chip label="MongoDB" variant="outlined" color="secondary" />
-          <Chip label="Express JS" variant="outlined" color="secondary" />
-          <Chip label="Node JS" variant="outlined" color="secondary" />
-          <Chip label="GitHub" variant="outlined" color="secondary" />
+          <Chip
+            sx={{ mr: "10px" }}
+            label="React JS"
+            variant="outlined"
+            color="secondary"
+          />
+          <Chip
+            sx={{ mr: "10px" }}
+            label="Material UI"
+            variant="outlined"
+            color="secondary"
+          />
+          <Chip
+            sx={{ mr: "10px" }}
+            label="TypeScript"
+            variant="outlined"
+            color="secondary"
+          />
+          <Chip
+            sx={{ mr: "10px" }}
+            label="MongoDB"
+            variant="outlined"
+            color="secondary"
+          />
+          <Chip
+            sx={{ mr: "10px" }}
+            label="Express JS"
+            variant="outlined"
+            color="secondary"
+          />
+          <Chip
+            sx={{ mr: "10px" }}
+            label="Node JS"
+            variant="outlined"
+            color="secondary"
+          />
+          <Chip
+            sx={{ mr: "10px" }}
+            label="GitHub"
+            variant="outlined"
+            color="secondary"
+          />
         </Typography>
       </ElevatedPaper>
     </Box>

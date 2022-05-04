@@ -159,13 +159,48 @@ export const LolStats = () => {
             width: "100%",
           }}
         >
-          <Chip label="React JS" variant="outlined" color="secondary" />
-          <Chip label="Material UI" variant="outlined" color="secondary" />
-          <Chip label="Chart JS" variant="outlined" color="secondary" />
-          <Chip label="PapaParse" variant="outlined" color="secondary" />
-          <Chip label="Node" variant="outlined" color="secondary" />
-          <Chip label="GitHub" variant="outlined" color="secondary" />
-          <Chip label="Heroku" variant="outlined" color="secondary" />
+          <Chip
+            sx={{ mr: "10px" }}
+            label="React JS"
+            variant="outlined"
+            color="secondary"
+          />
+          <Chip
+            sx={{ mr: "10px" }}
+            label="Material UI"
+            variant="outlined"
+            color="secondary"
+          />
+          <Chip
+            sx={{ mr: "10px" }}
+            label="Chart JS"
+            variant="outlined"
+            color="secondary"
+          />
+          <Chip
+            sx={{ mr: "10px" }}
+            label="PapaParse"
+            variant="outlined"
+            color="secondary"
+          />
+          <Chip
+            sx={{ mr: "10px" }}
+            label="Node"
+            variant="outlined"
+            color="secondary"
+          />
+          <Chip
+            sx={{ mr: "10px" }}
+            label="GitHub"
+            variant="outlined"
+            color="secondary"
+          />
+          <Chip
+            sx={{ mr: "10px" }}
+            label="Heroku"
+            variant="outlined"
+            color="secondary"
+          />
         </Typography>
       </ElevatedPaper>
     </Box>
