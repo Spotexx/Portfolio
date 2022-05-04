@@ -142,7 +142,7 @@ export const Sarabot = () => {
           then a search engine.
         </Typography>
         <Typography>
-          Test sign in credentials: email@email.com/password
+          Demo login credentials: email@email.com/password
         </Typography>
         <a href={"https://github.com/ChisatoSozo/ai-code-helper"}>
           <Typography

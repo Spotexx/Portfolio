@@ -139,7 +139,7 @@ export const MedicationTracker = () => {
           mainly responsible for the frontend in a highly collaborative
           environment using GitHub.
         </Typography>
-        <Typography>Test sign in credentials: user/password</Typography>
+        <Typography>Demo login credentials: user/password</Typography>
         <a href={"https://github.com/moonryc/moonmeds"}>
           <Typography
             component={"div"}

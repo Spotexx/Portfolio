@@ -140,7 +140,7 @@ export const Appli = () => {
           their saved cover letters and delete them.
         </Typography>
         <Typography>
-          Test sign in credentials: email@email.com/password
+          Demo login credentials: email@email.com/password
         </Typography>
         <a href={"https://github.com/Travis-Anderson023/Appli"}>
           <Typography
